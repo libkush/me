@@ -1,0 +1,21 @@
+/* import a font from file */
+
+body {
+  background-color: #1d1d1f;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-y: overlay;
+}
+
+/* change scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  border: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a374ff;
+  border-radius: 10px;
+}
