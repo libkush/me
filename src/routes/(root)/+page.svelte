@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Blob from '$lib/Blob.svelte';
+  import Blob from '$lib/components/Blob.svelte';
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let interval: null | NodeJS.Timer = null;
   const cool = (event: any) => {
@@ -22,14 +22,13 @@
       iteration += 1 / 3;
     }, 30);
   };
-  let caption: HTMLElement | null = null;
 </script>
 
 <section class="hero">
   <h1>HI, I'M</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
   <h1 style="color: #b0f6ff;" on:mousemove={cool} data-value="KUSH PATEL">KUSH PATEL</h1>
-  <span bind:this={caption} />
+  <span />
 </section>
 <div id="container">
   <div class="backdrop" />
