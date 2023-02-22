@@ -130,4 +130,10 @@
     opacity: 0.5;
     z-index: -1;
   }
+  /* dont show on mobile screens */
+  @media (max-width: 600px) {
+    .blob {
+      display: none;
+    }
+  }
 </style>
