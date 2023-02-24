@@ -1,6 +1,8 @@
 <script lang="ts">
   import Blob from '$lib/components/Blob.svelte';
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  import PostsList from '$lib/components/PostsList.svelte';
+  import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
   let interval: null | NodeJS.Timer = null;
   const cool = (event: any) => {
     let iteration = 0;
@@ -22,14 +24,28 @@
       iteration += 1 / 3;
     }, 30);
   };
+  export let data: { posts: App.BlogPostWithNextAndPrevious[] };
 </script>
 
 <section class="hero">
   <h1>HI, I'M</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 style="color: #b0f6ff;" on:mousemove={cool} data-value="KUSH PATEL">KUSH PATEL</h1>
+  <h1 style="color: #66ffa3" on:mousemove={cool} data-value="KUSH PATEL">KUSH PATEL</h1>
   <span />
 </section>
+<div class="flex flex-col flex-grow w-3/4 m-auto gap-8 pb-16">
+  <section class="w-full">
+    <div class="flex items-center justify-between gap-4 mb-8">
+      <h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">
+        Recently Published
+      </h2>
+      <a href="/posts" class="flex items-center gap-1 text-sm font-medium text-teal-500"
+        >View All <ArrowRightIcon class="w-4 h-4" /></a
+      >
+    </div>
+    <PostsList posts={data.posts} />
+  </section>
+</div>
 <div id="container">
   <div class="backdrop" />
   <Blob />
@@ -52,7 +68,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(7vmax);
+    backdrop-filter: blur(8vmax);
   }
   .hero {
     height: 100vh;
@@ -66,6 +82,7 @@
   h1 {
     font-family: 'Space Mono', monospace;
     font-size: clamp(3rem, 10vw, 10rem);
+    font-weight: 800;
     color: white;
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;

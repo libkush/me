@@ -10,7 +10,7 @@
 <nav data-open={open} class:close={open}>
   <button on:click={toggle}>
     <svg
-      class="toggle"
+      class="hamburger"
       width="3rem"
       height="3rem"
       viewBox="0 0 100 100"
@@ -133,15 +133,6 @@
     text-decoration: none;
     transition: opacity 400ms ease;
   }
-
-  .toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    display: flex;
-    z-index: 99;
-  }
   nav[data-open='true'] {
     position: fixed;
   }
@@ -154,6 +145,12 @@
     background: none;
     border: none;
     outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    display: flex;
+    z-index: 99;
   }
   svg {
     cursor: pointer;

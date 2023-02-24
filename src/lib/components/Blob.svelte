@@ -111,10 +111,10 @@
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    height: 50vmax;
+    height: 55vmax;
     aspect-ratio: 1;
     translate: -50% -50%;
-    opacity: 0.5;
+    opacity: 0.4;
     z-index: -1;
   }
   /* dont show on mobile screens */
