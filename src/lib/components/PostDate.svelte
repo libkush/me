@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class={['relative z-10 order-first mb-3 flex text-zinc-500 dark:text-zinc-400', _class].join(' ')}
+  class={['relative z-10 order-first mb-3 flex text-zinc-500 dark:text-zinc-300', _class].join(' ')}
   class:pl-3.5={decorate}
 >
   {#if decorate}
