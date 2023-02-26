@@ -20,7 +20,7 @@ const config = {
   kit: {
     adapter: adapter({ strict: true }),
     prerender: {
-      entries: ['*', '/sitemap.xml', '/rss.xml']
+      entries: ['*']
     }
   }
 };
