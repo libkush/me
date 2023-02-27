@@ -7,8 +7,6 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
-  // Consult https://kit.svelte.dev/docs/integrations#preprocessors
-  // for more information about preprocessors
   preprocess: [
     preprocess({
       postcss: true
@@ -20,7 +18,7 @@ const config = {
   kit: {
     adapter: adapter({ strict: true }),
     prerender: {
-      entries: ['*']
+      entries: ['*', '/sitemap.xml', '/rss.xml']
     }
   }
 };

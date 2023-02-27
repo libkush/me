@@ -1,34 +1,61 @@
-import remarkGithub from 'remark-github';
-import remarkAbbr from 'remark-abbr';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { defineMDSveXConfig as defineConfig } from 'mdsvex';
+import { visit } from 'unist-util-visit';
+import autolinkHeadings from 'rehype-autolink-headings';
+import slugPlugin from 'rehype-slug';
+import relativeImages from 'mdsvex-relative-images';
+import remarkHeadings from '@vcarl/remark-headings';
 
-const config = defineConfig({
-  extensions: ['.svelte.md', '.md', '.svx'],
-
+export default {
+  extensions: ['.svx', '.md'],
   smartypants: {
     dashes: 'oldschool'
   },
-
-  remarkPlugins: [
-    [
-      remarkGithub,
-      {
-        repository: 'https://github.com/Quat3rnion/me'
-      }
-    ],
-    remarkAbbr
-  ],
+  remarkPlugins: [videos, relativeImages, headings],
   rehypePlugins: [
-    rehypeSlug,
+    slugPlugin,
     [
-      rehypeAutolinkHeadings,
+      autolinkHeadings,
       {
         behavior: 'wrap'
       }
     ]
   ]
-});
+};
 
-export default config;
+function videos() {
+  const extensions = ['mp4', 'webm'];
+  return function transformer(tree) {
+    visit(tree, 'image', (node) => {
+      if (extensions.some((ext) => node.url.endsWith(ext))) {
+        node.type = 'html';
+        node.value = `
+            <video 
+              src="${node.url}"
+              autoplay
+              muted
+              playsinline
+              loop
+              title="${node.alt}"
+            />
+          `;
+      }
+    });
+  };
+}
+
+function headings() {
+  return function transformer(tree, vfile) {
+    // run remark-headings plugin
+    remarkHeadings()(tree, vfile);
+
+    // include the headings data in mdsvex frontmatter
+    vfile.data.fm ??= {};
+    vfile.data.fm.headings = vfile.data.headings.map((heading) => ({
+      ...heading,
+      // slugify heading.value
+      id: heading.value
+        .toLowerCase()
+        .replace(/\s/g, '-')
+        .replace(/[^a-z0-9-]/g, '')
+    }));
+  };
+}

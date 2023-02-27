@@ -1,8 +1,9 @@
+import { getPosts } from '$lib/posts';
 import { error } from '@sveltejs/kit';
 import type * as Kit from '@sveltejs/kit';
 
-export const load = (async ({ fetch, params }) => {
-  const posts = await fetch('/api/getPosts').then((res) => res.json());
+export const load = (async ({ params }) => {
+  const posts = await getPosts(1);
 
   if (posts) {
     return { posts: posts };
