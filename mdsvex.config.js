@@ -3,13 +3,27 @@ import autolinkHeadings from 'rehype-autolink-headings';
 import slugPlugin from 'rehype-slug';
 import relativeImages from 'mdsvex-relative-images';
 import remarkHeadings from '@vcarl/remark-headings';
+import remarkGithub from 'remark-github';
+import remarkAbbr from 'remark-abbr';
+import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 
-export default {
+const config = defineConfig({
   extensions: ['.svx', '.md'],
   smartypants: {
     dashes: 'oldschool'
   },
-  remarkPlugins: [videos, relativeImages, headings],
+  remarkPlugins: [
+    videos,
+    relativeImages,
+    headings,
+    remarkAbbr,
+    [
+      remarkGithub,
+      {
+        repository: 'https://github.com/Quat3rnion/me.git'
+      }
+    ]
+  ],
   rehypePlugins: [
     slugPlugin,
     [
@@ -19,7 +33,9 @@ export default {
       }
     ]
   ]
-};
+});
+
+export default config;
 
 function videos() {
   const extensions = ['mp4', 'webm'];

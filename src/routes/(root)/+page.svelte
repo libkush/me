@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Blob from '$lib/components/Blob.svelte';
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   import PostsList from '$lib/components/PostsList.svelte';
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
@@ -107,10 +106,6 @@
     <PostsList posts={data.posts} />
   </section>
 </div>
-<div id="container">
-  <div class="backdrop" />
-  <Blob />
-</div>
 
 <style>
   .typewriter {
@@ -128,24 +123,7 @@
     @apply text-teal-500;
     filter: drop-shadow(0px 0px 3px rgb(20 184 166));
   }
-  #container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    overflow: hidden;
-    z-index: -1;
-  }
-  .backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(8vmax);
-  }
+
   .hero {
     height: 100vh;
     width: 100%;

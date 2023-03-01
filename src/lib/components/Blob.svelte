@@ -44,7 +44,7 @@
   }
 
   let hueNoiseOffset = 0;
-  let noiseStep = 0.003;
+  let noiseStep = 0.005;
 
   const points = createPoints();
   onMount(() => {
@@ -111,10 +111,10 @@
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    height: 55vmax;
+    height: 50vmax;
     aspect-ratio: 1;
     translate: -50% -50%;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -1;
   }
   /* dont show on mobile screens */
