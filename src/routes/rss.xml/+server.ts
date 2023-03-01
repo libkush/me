@@ -1,9 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { getAllPosts } from '$lib/posts';
 export const prerender = true;
-
-const name = 'Kush';
-const website = 'https://kush.in';
+import { name, website } from '$lib/info';
 
 const websiteDescription = `${name}'s blog`;
 const postsUrl = `${website}/posts`;

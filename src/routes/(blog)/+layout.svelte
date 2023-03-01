@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
   import '../../app.css';
   import '../../prism.css';
   import { page } from '$app/stores';
-
-  const name = 'Kush Patel';
+  import { name } from '$lib/info';
   function disableTransitionsTemporarily() {
     document.documentElement.classList.add('[&_*]:!transition-none');
     window.setTimeout(() => {

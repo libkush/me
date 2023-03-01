@@ -1,8 +1,5 @@
 <script lang="ts">
-  //   import { website, name, bio, avatar } from '$lib/info.js';
-  const website = 'https://kush.in';
-  const name = 'Kush Patel';
-  const avatar = '/avatar.jpg';
+  import { website, name, bio, avatar } from '$lib/info';
   import ToC from '$lib/components/ToC.svelte';
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
   import { afterNavigate } from '$app/navigation';
@@ -113,10 +110,7 @@
           </a>
         </div>
         <p class="order-3 text-base text-zinc-600 dark:text-zinc-400">
-          I'm Kush, a student from India. I'm a full-stack developer working with Node.js, Flask,
-          React, and Svelte. I'm learning new technologoies and building projects. I also have an
-          interest in cyber-security and hacking. But above all, I hate describing myself, so that's
-          it :)
+          {bio}
         </p>
       </div>
     </div>

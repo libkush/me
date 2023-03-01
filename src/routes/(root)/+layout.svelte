@@ -1,10 +1,8 @@
 <script lang="ts">
   import '../../app.css';
   import Menu from '$lib/components/Menu.svelte';
+  import { firstName } from '$lib/info';
 </script>
 
-<svelte:head>
-  <title>Kush</title>
-</svelte:head>
 <Menu />
 <slot />

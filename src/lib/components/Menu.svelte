@@ -11,7 +11,7 @@
 </script>
 
 <nav data-open={open} class:close={open}>
-  <button on:click={toggle}>
+  <button name="menu-toggle" on:click={toggle}>
     <svg
       class="hamburger"
       width="3rem"

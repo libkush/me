@@ -1,9 +1,8 @@
 import type { PageServerLoad } from './$types';
 import { getAllPosts } from '$lib/posts';
+import { website } from '$lib/info';
 
 export const prerender = true;
-
-const website = 'https://kush.in';
 
 const getPostUrl = (slug: string) => `${website}/post/${slug}`;
 

@@ -5,6 +5,7 @@
   import Typewriter from 'svelte-typewriter';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
   import Blob from '$lib/components/Blob.svelte';
+  import { name, bio } from '$lib/info';
   let interval: null | NodeJS.Timer = null;
   const cool = (event: any) => {
     let iteration = 0;
@@ -28,6 +29,12 @@
   };
   export let data: { posts: App.BlogPostWithNextAndPrevious[] };
 </script>
+
+<svelte:head>
+  <title>{name}</title>
+  <meta name="description" content={bio} />
+  <meta property="og:description" content={bio} />
+</svelte:head>
 
 <Blob />
 <section class="hero">
