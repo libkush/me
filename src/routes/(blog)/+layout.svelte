@@ -3,14 +3,10 @@
   import '../../prism.css';
   import { page } from '$app/stores';
   import { name } from '$lib/info';
-  function disableTransitionsTemporarily() {
-    document.documentElement.classList.add('[&_*]:!transition-none');
-    window.setTimeout(() => {
-      document.documentElement.classList.remove('[&_*]:!transition-none');
-    }, 0);
-  }
+  import Menu from '$lib/components/Menu.svelte';
 </script>
 
+<Menu />
 <div class="flex flex-col min-h-screen ">
   <div class="flex flex-col flex-grow w-full px-4 py-2">
     <header class="flex items-center justify-between w-full max-w-2xl py-4 mx-auto lg:pb-8">
