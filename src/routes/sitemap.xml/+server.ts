@@ -31,6 +31,11 @@ export const GET = (async ({ setHeaders }) => {
         <priority>1.0</priority>
       </url>
 
+      <url>
+        <loc>${website}/posts</loc>
+        <priority>1.0</priority>
+      </url>
+
       ${posts
         .map(
           (post) => `<url>
