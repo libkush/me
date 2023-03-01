@@ -3,6 +3,7 @@
   import PostsList from '$lib/components/PostsList.svelte';
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
   import Typewriter from 'svelte-typewriter';
+  import Blob from '$lib/components/Blob.svelte';
   let interval: null | NodeJS.Timer = null;
   const cool = (event: any) => {
     let iteration = 0;
@@ -27,11 +28,12 @@
   export let data: { posts: App.BlogPostWithNextAndPrevious[] };
 </script>
 
+<Blob />
 <section class="hero">
   <h1>HI, I'M</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
   <h1 style="color: #67e8f9" on:mousemove={cool} data-value="KUSH PATEL">KUSH PATEL</h1>
-  <div class="typewriter flex flex-row text-xl gap-1">
+  <div class="typewriter text-white flex flex-row text-xl gap-1">
     <Typewriter interval={70} mode="loop">
       <span>exploring</span>
       <span>learning</span>
@@ -96,10 +98,8 @@
 <div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
   <section class="w-full">
     <div class="flex items-center justify-between gap-4 mb-8">
-      <h2 class="text-xl font-medium sm:text-base text-zinc-500 dark:text-zinc-200">
-        Recently Published
-      </h2>
-      <a href="/posts" class="flex items-center gap-1 text-base font-medium text-teal-500"
+      <h2 class="text-xl font-medium sm:text-base text-zinc-200">Recently Published</h2>
+      <a href="/posts" class="flex items-center gap-1 text-base font-medium text-cyan-500"
         >View All <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>
@@ -112,18 +112,6 @@
     --cursor-color: #ffffff;
     --cursor-width: 0.2rem;
   }
-  .social > svg {
-    width: 2rem;
-    height: 2rem;
-    stroke-width: 2;
-    @apply text-white;
-    cursor: pointer;
-  }
-  .social > svg:hover {
-    @apply text-teal-500;
-    filter: drop-shadow(0px 0px 3px rgb(20 184 166));
-  }
-
   .hero {
     height: 100vh;
     width: 100%;

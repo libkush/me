@@ -4,7 +4,7 @@ import slugPlugin from 'rehype-slug';
 import relativeImages from 'mdsvex-relative-images';
 import remarkHeadings from '@vcarl/remark-headings';
 import remarkGithub from 'remark-github';
-import remarkAbbr from 'remark-abbr';
+import emoji from 'remark-emoji';
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 
 const config = defineConfig({
@@ -16,7 +16,7 @@ const config = defineConfig({
     videos,
     relativeImages,
     headings,
-    remarkAbbr,
+    emoji,
     [
       remarkGithub,
       {

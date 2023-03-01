@@ -48,7 +48,7 @@ export async function getPosts(page: number) {
   return publishedPosts;
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<App.BlogPostWithNextAndPrevious[]> {
   const modules = import.meta.glob('/posts/**/*.{md,svx,svelte.md}');
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
   const awaitingPosts = entries.map(async ([path, resolver]) => {

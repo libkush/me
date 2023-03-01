@@ -89,22 +89,43 @@
   });
 </script>
 
-<svg
-  class="blob"
-  style="--startColor:{startColor};--stopColor:{stopColor}"
-  bind:this={blob}
-  viewBox="0 0 200 200"
->
-  <defs>
-    <linearGradient id="gradient" gradientTransform="rotate(90)">
-      <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
-      <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
-    </linearGradient>
-  </defs>
-  <path bind:this={path} d="" fill="url('#gradient')" />
-</svg>
+<div id="container">
+  <div class="backdrop" />
+  <svg
+    class="blob"
+    style="--startColor:{startColor};--stopColor:{stopColor}"
+    bind:this={blob}
+    viewBox="0 0 200 200"
+  >
+    <defs>
+      <linearGradient id="gradient" gradientTransform="rotate(90)">
+        <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
+        <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
+      </linearGradient>
+    </defs>
+    <path bind:this={path} d="" fill="url('#gradient')" />
+  </svg>
+</div>
 
 <style>
+  #container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(7vmax);
+  }
   .blob {
     position: absolute;
     left: 50%;

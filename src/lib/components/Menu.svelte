@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
   import { fly } from 'svelte/transition';
   let open = false;
-  let activeIndex;
+  let activeIndex: number;
   const toggle = () => {
     open = !open;
+  };
+  const close = (e: Event) => {
+    open = false;
   };
 </script>
 
@@ -27,38 +30,50 @@
   <div id="menu" data-active-index={activeIndex} transition:fly>
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <div id="menu-items">
-      <div
+      <a
+        href="/"
+        on:click={close}
+        on:keypress={close}
         on:mouseover={() => {
           activeIndex = 0;
         }}
         class="menu-item"
       >
         Home
-      </div>
-      <div
+      </a>
+      <a
+        on:click={close}
+        href="/posts"
+        on:keypress={close}
         on:mouseover={() => {
           activeIndex = 1;
         }}
         class="menu-item"
       >
         Posts
-      </div>
-      <div
+      </a>
+      <a
+        href="/about"
+        on:click={close}
+        on:keypress={close}
         on:mouseover={() => {
           activeIndex = 2;
         }}
         class="menu-item"
       >
         About
-      </div>
-      <div
+      </a>
+      <a
+        href="/talk"
+        on:click={close}
+        on:keypress={close}
         on:mouseover={() => {
           activeIndex = 3;
         }}
         class="menu-item"
       >
         Talk
-      </div>
+      </a>
     </div>
     <div id="menu-background-pattern" />
   </div>
