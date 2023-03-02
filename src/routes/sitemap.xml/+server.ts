@@ -4,7 +4,7 @@ import { website } from '$lib/info';
 
 export const prerender = true;
 
-const getPostUrl = (slug: string) => `${website}/post/${slug}`;
+const getPostUrl = (slug: string) => `${website}post/${slug}`;
 
 export const GET = (async ({ setHeaders }) => {
   const posts = await getAllPosts();
@@ -32,7 +32,7 @@ export const GET = (async ({ setHeaders }) => {
       </url>
 
       <url>
-        <loc>${website}/posts</loc>
+        <loc>${website}posts</loc>
         <priority>1.0</priority>
       </url>
 

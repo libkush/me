@@ -4,7 +4,7 @@ export const prerender = true;
 import { name, website } from '$lib/info';
 
 const websiteDescription = `${name}'s blog`;
-const postsUrl = `${website}/posts`;
+const postsUrl = `${website}posts`;
 
 export const GET = (async ({ setHeaders }) => {
   const posts = await getAllPosts();
@@ -19,7 +19,7 @@ export const GET = (async ({ setHeaders }) => {
         <title>${name}</title>
         <link>${website}</link>
         <description>${websiteDescription}</description>
-        <atom:link href="${website}/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="${website}rss.xml" rel="self" type="application/rss+xml" />
         ${posts
           .map(
             (post) =>
