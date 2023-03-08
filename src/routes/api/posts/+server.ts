@@ -10,6 +10,6 @@ export const GET = (async ({ url }) => {
   const before = url.searchParams.get('before') || '';
   const during = url.searchParams.get('during') || '';
   const tags = url.searchParams.get('tags')?.split(',') || [];
-  const posts = await getPosts(parseInt(page), all, before, after, during, tags);
+  const posts = await getPosts(all, parseInt(page), before, after, during, tags);
   return json({ posts: posts });
 }) satisfies PageServerLoad;

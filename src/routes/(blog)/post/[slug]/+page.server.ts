@@ -1,16 +1,14 @@
 import { error } from '@sveltejs/kit';
+import { getPosts } from '$lib/posts';
 import type { PageServerLoad } from './$types';
 
-export const load = (async ({ params, fetch }) => {
+export const load = (async ({ params }) => {
   const { slug } = params;
-  const data = (await fetch('/api/posts?all=true').then((res) => res.json())) as App.APIResponse;
-
-  const post = data.posts.find((post) => slug === post.slug);
-
+  const posts = await getPosts(true);
+  const post = posts.find((post) => slug === post.slug);
   if (!post) {
     throw error(404, 'Post not found');
   }
-
   return {
     post
   };

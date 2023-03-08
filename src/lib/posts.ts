@@ -7,12 +7,12 @@ if (browser) {
 }
 
 export async function getPosts(
-  page: number,
-  all: boolean,
-  before: string,
-  after: string,
-  during: string,
-  tags: string[]
+  all: boolean = false,
+  page: number = 1,
+  before: string = '',
+  after: string = '',
+  during: string = '',
+  tags: string[] = []
 ): Promise<App.BlogPost[]> {
   const modules = import.meta.glob('/posts/**/*.{md,svx,svelte.md}');
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
