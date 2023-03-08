@@ -6,7 +6,13 @@ if (browser) {
   throw new Error(`posts can only be imported server-side`);
 }
 
-export async function getPosts(page: number) {
+export async function getPosts(
+  page: number,
+  before: string,
+  after: string,
+  during: string,
+  tags: string[]
+): Promise<App.BlogPostWithNextAndPrevious[]> {
   const modules = import.meta.glob('/posts/**/*.{md,svx,svelte.md}');
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
   const awaitingPosts = entries.map(async ([path, resolver]) => {
@@ -19,17 +25,12 @@ export async function getPosts(page: number) {
         .split('/')
         .pop(),
       isIndex: path.endsWith('/index.md'),
-      // format date as yyyy-MM-dd
       date: post.metadata.date
-        ? format(
-            // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(post.metadata.date)),
-            'yyyy-MM-dd'
-          )
+        ? format(addTimezoneOffset(new Date(post.metadata.date)), 'yyyy-MM-dd')
         : undefined,
+      metaDate: post.metadata.date,
       preview: {
         html: preview?.toString(),
-        // text-only preview (i.e no html elements), used for SEO
         text: preview?.structuredText ?? preview?.toString()
       },
       ...(post as App.MdsvexFile).metadata
@@ -45,6 +46,27 @@ export async function getPosts(page: number) {
   const publishedPosts = posts
     .filter((post) => post.published)
     .slice((page - 1) * 10, page * 10 - 1);
+  if (before !== '') {
+    return publishedPosts.filter(
+      (post) => new Date(post.date).getTime() < new Date(before).getTime()
+    );
+  }
+  if (after !== '') {
+    return publishedPosts.filter(
+      (post) => new Date(post.date).getTime() > new Date(after).getTime()
+    );
+  }
+  if (during !== '') {
+    return publishedPosts.filter(
+      (post) =>
+        post.metaDate === during ||
+        (new Date(post.date).getTime() >= new Date(during).getTime() &&
+          new Date(post.date).getTime() <= new Date(during).getTime() + 1000 * 60 * 60 * 24)
+    );
+  }
+  if (tags && tags.length > 0) {
+    return publishedPosts.filter((post) => post.tags?.some((tag) => tags.includes(tag)));
+  }
   return publishedPosts;
 }
 
@@ -61,17 +83,12 @@ export async function getAllPosts(): Promise<App.BlogPostWithNextAndPrevious[]> 
         .split('/')
         .pop(),
       isIndex: path.endsWith('/index.md'),
-      // format date as yyyy-MM-dd
       date: post.metadata.date
-        ? format(
-            // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(post.metadata.date)),
-            'yyyy-MM-dd'
-          )
+        ? format(addTimezoneOffset(new Date(post.metadata.date)), 'yyyy-MM-dd')
         : undefined,
+      metaDate: post.metadata.date,
       preview: {
         html: preview?.toString(),
-        // text-only preview (i.e no html elements), used for SEO
         text: preview?.structuredText ?? preview?.toString()
       },
       ...(post as App.MdsvexFile).metadata

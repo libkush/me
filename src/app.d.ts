@@ -19,6 +19,7 @@ declare namespace App {
     title: string;
     preview: { html: string; text: string };
     date: string;
+    metaDate: string;
     isIndex: boolean;
     published: boolean;
     tags: string[];
@@ -27,5 +28,8 @@ declare namespace App {
   interface BlogPostWithNextAndPrevious extends BlogPost {
     next: BlogPost;
     previous: BlogPost;
+  }
+  interface APIResponse {
+    posts: BlogPostWithNextAndPrevious[];
   }
 }

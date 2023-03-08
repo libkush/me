@@ -1,13 +1,13 @@
 import type { PageServerLoad } from './$types';
-import { getAllPosts } from '$lib/posts';
 export const prerender = true;
 import { name, website } from '$lib/info';
 
 const websiteDescription = `${name}'s blog`;
 const postsUrl = `${website}posts`;
 
-export const GET = (async ({ setHeaders }) => {
-  const posts = await getAllPosts();
+export const GET = (async ({ setHeaders, fetch }) => {
+  const data = (await fetch('/api/posts?all=true').then((res) => res.json())) as App.APIResponse;
+  const posts = data.posts;
 
   setHeaders({
     'Cache-Control': `max-age=0, s-max-age=600`,

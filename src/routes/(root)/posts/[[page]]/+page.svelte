@@ -13,9 +13,10 @@
   let newBatch: Data['posts'] = [];
 
   async function fetchData() {
-    const response = await fetch(`/api/getPostsByPage?page=${page}`);
-    const d = await response.json();
-    newBatch = d.posts;
+    const response = (await fetch(`/api/posts?page=${page}`).then((res) =>
+      res.json()
+    )) as App.APIResponse;
+    newBatch = response.posts;
   }
 
   onMount(() => {

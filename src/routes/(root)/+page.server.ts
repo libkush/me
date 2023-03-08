@@ -1,12 +1,11 @@
-import { getPosts } from '$lib/posts';
 import { error } from '@sveltejs/kit';
 import type * as Kit from '@sveltejs/kit';
 
-export const load = (async ({ params }) => {
-  const posts = await getPosts(1);
+export const load = (async ({ params, fetch }) => {
+  const data = (await fetch('/api/posts').then((res) => res.json())) as App.APIResponse;
 
-  if (posts) {
-    return { posts: posts };
+  if (data.posts.length) {
+    return data;
   }
 
   throw error(404, 'Not found');
