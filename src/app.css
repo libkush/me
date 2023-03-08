@@ -34,4 +34,15 @@
   hr {
     @apply border-zinc-700/25;
   }
+  .social {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 2;
+    @apply text-white;
+    cursor: pointer;
+  }
+  .social:hover {
+    @apply text-cyan-500;
+    filter: drop-shadow(0px 0px 3px rgb(20 184 166));
+  }
 }
