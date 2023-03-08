@@ -1,12 +1,15 @@
 <script land="ts">
   export let as = 'div';
   export let href = undefined;
-
   let _class = undefined;
   export { _class as class };
 </script>
 
-<svelte:element this={as} class={['relative flex flex-col items-start group', _class].join(' ')}>
+<svelte:element
+  this={as}
+  data-sveltekit-preload-data="hover"
+  class={['relative flex flex-col items-start group', _class].join(' ')}
+>
   <slot name="eyebrow" />
 
   {#if $$slots.title}
@@ -15,7 +18,7 @@
         <div
           class="absolute z-0 transition scale-95 opacity-0 -inset-y-6 -inset-x-4  group-hover:scale-100 group-hover:opacity-50 bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
         />
-        <a {href} data-sveltekit-prefetch>
+        <a {href} prefetch>
           <span class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
           <span class="relative z-10">
             <slot name="title" />

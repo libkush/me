@@ -27,7 +27,7 @@
       iteration += 1 / 3;
     }, 30);
   };
-  export let data: { posts: App.BlogPostWithNextAndPrevious[] };
+  export let data: { posts: App.BlogPost[] };
 </script>
 
 <svelte:head>

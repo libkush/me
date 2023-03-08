@@ -1,20 +1,20 @@
-<script>
+<script lang="ts">
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import Card from './Card.svelte';
 
-  export let post;
+  export let post: App.BlogPost;
 
-  let elements = [];
-  let headings = post.headings;
+  let elements: (HTMLElement | null)[] = [];
+  let headings: App.BlogPostHeading[] = post.headings;
 
   onMount(() => {
     updateHeadings();
     setActiveHeading();
   });
 
-  let activeHeading = headings[0];
-  let scrollY;
+  let activeHeading: App.BlogPostHeading = headings[0];
+  let scrollY: number;
 
   function updateHeadings() {
     headings = post.headings;
@@ -29,7 +29,9 @@
     scrollY = window.scrollY;
 
     const visibleIndex =
-      elements.findIndex((element) => element.offsetTop + element.clientHeight > scrollY) - 1;
+      elements.findIndex((element) => {
+        if (element) return element.offsetTop + element.clientHeight > scrollY;
+      }) - 1;
 
     activeHeading = headings[visibleIndex];
 

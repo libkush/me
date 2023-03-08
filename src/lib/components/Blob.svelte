@@ -47,17 +47,19 @@
   let noiseStep = 0.005;
 
   const points = createPoints();
+
+  function movePointer(event: MouseEvent): void {
+    const { clientX, clientY } = event;
+    blob?.animate(
+      {
+        left: `${clientX}px`,
+        top: `${clientY}px`
+      },
+      { duration: 3000, fill: 'forwards' }
+    );
+  }
+
   onMount(() => {
-    window.onpointermove = (event) => {
-      const { clientX, clientY } = event;
-      blob?.animate(
-        {
-          left: `${clientX}px`,
-          top: `${clientY}px`
-        },
-        { duration: 3000, fill: 'forwards' }
-      );
-    };
     (function animate() {
       path?.setAttribute('d', spline(points, 1, true));
 
@@ -89,6 +91,7 @@
   });
 </script>
 
+<svelte:window on:mousemove={movePointer} />
 <div id="container">
   <div class="backdrop" />
   <svg

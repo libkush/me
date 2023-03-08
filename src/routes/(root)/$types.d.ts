@@ -1,8 +1,8 @@
 import type * as Kit from '@sveltejs/kit';
 
 type PageData = {
-  next: App.BlogPost;
-  previous: App.BlogPost;
+  next: App.PostData;
+  previous: App.PostData;
   slug: string;
   title: string;
   preview: {

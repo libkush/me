@@ -8,7 +8,7 @@
   import SocialLinks from '$lib/components/SocialLinks.svelte';
 
   type Data = {
-    post: App.BlogPostWithNextAndPrevious;
+    post: App.BlogPost;
     component: ComponentType<SvelteComponentTyped>;
     layout: {
       fullWidth: boolean;
@@ -81,7 +81,7 @@
   <div class="w-full mx-auto overflow-x-hidden">
     <article>
       <header class="flex flex-col">
-        <h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
+        <h1 class="mt-6 mb-6 text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
           {data.post.title}
         </h1>
         <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
@@ -96,7 +96,7 @@
     <!-- bio -->
     <hr />
     <div class="py-8">
-      <div class="grid gap-4">
+      <div class="grid">
         <div class="flex justify-center order-1 col-span-2 gap-6 md:order-2">
           <SocialLinks />
         </div>

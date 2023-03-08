@@ -5,7 +5,7 @@
   import { onMount } from 'svelte';
 
   type Data = {
-    posts: App.BlogPostWithNextAndPrevious[];
+    posts: App.BlogPost[];
   };
 
   let page = 1;

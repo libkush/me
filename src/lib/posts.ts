@@ -13,7 +13,7 @@ export async function getPosts(
   after: string,
   during: string,
   tags: string[]
-): Promise<App.BlogPostWithNextAndPrevious[]> {
+): Promise<App.BlogPost[]> {
   const modules = import.meta.glob('/posts/**/*.{md,svx,svelte.md}');
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
   const awaitingPosts = entries.map(async ([path, resolver]) => {
@@ -35,7 +35,7 @@ export async function getPosts(
         text: preview?.structuredText ?? preview?.toString()
       },
       ...(post as App.MdsvexFile).metadata
-    } as App.BlogPost;
+    } as App.PostData;
   });
 
   const posts = (await Promise.all(awaitingPosts))
@@ -92,6 +92,6 @@ function addTimezoneOffset(date: Date) {
   return new Date(new Date(date).getTime() + offsetInMilliseconds);
 }
 
-function paginate(posts: App.BlogPostWithNextAndPrevious[], page: number) {
+function paginate(posts: App.BlogPost[], page: number) {
   return posts.slice((page - 1) * 10, page * 10 - 1);
 }

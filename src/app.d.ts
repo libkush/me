@@ -14,22 +14,27 @@ declare namespace App {
 
   type MdsvexResolver = () => Promise<MdsvexFile>;
 
-  interface BlogPost {
+  interface BlogPostHeading {
+    depth: number;
+    value: string;
+    id: string;
+  }
+  interface PostData {
     slug: string;
     title: string;
     preview: { html: string; text: string };
+    headings: BlogPostHeading[];
     date: string;
     metaDate: string;
     isIndex: boolean;
     published: boolean;
     tags: string[];
   }
-
-  interface BlogPostWithNextAndPrevious extends BlogPost {
-    next: BlogPost;
-    previous: BlogPost;
+  interface BlogPost extends PostData {
+    next: PostData;
+    previous: PostData;
   }
   interface APIResponse {
-    posts: BlogPostWithNextAndPrevious[];
+    posts: BlogPost[];
   }
 }

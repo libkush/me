@@ -2,7 +2,7 @@
   import PostPreview from '$lib/components/PostPreview.svelte';
   import PostDate from '$lib/components/PostDate.svelte';
 
-  export let posts: App.BlogPostWithNextAndPrevious[];
+  export let posts: App.BlogPost[];
 </script>
 
 <div class="flex flex-col gap-16 md:border-l md:pl-6 md:border-zinc-100/40">

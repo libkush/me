@@ -2,17 +2,14 @@
   import { format, parseISO } from 'date-fns';
 
   export let decorate: any;
-  export let post: App.BlogPostWithNextAndPrevious;
+  export let post: App.BlogPost;
   export let collapsed = false;
 
   let _class: string;
   export { _class as class };
 </script>
 
-<div
-  class={['relative z-10 order-first mb-3 flex text-zinc-300', _class].join(' ')}
-  class:pl-3.5={decorate}
->
+<div class={['relative z-10 mb-3 flex text-zinc-300', _class].join(' ')} class:pl-3.5={decorate}>
   {#if decorate}
     <span class="absolute inset-y-0 left-0 flex items-center py-1" aria-hidden="true">
       <span class="h-full w-0.5 rounded-full bg-zinc-500" />
