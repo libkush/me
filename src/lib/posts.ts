@@ -37,6 +37,7 @@ export async function getPosts(
       ...(post as App.MdsvexFile).metadata
     } as App.BlogPost;
   });
+
   const posts = (await Promise.all(awaitingPosts))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .map((post, index, allPosts) => ({
@@ -63,6 +64,7 @@ export async function getPosts(
       page
     );
   }
+
   if (during !== '') {
     return paginate(
       publishedPosts.filter(
@@ -74,12 +76,14 @@ export async function getPosts(
       page
     );
   }
+
   if (tags && tags.length > 0) {
     return paginate(
       publishedPosts.filter((post) => post.tags?.some((tag) => tags.includes(tag))),
       page
     );
   }
+
   return paginate(publishedPosts, page);
 }
 

@@ -37,10 +37,12 @@
 </svelte:head>
 
 <Blob />
-<section class="hero">
+<section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
   <h1>HI, I'M</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 style="color: #67e8f9" on:mousemove={cool} data-value="KUSH PATEL">KUSH PATEL</h1>
+  <h1 style="color: #67e8f9" on:mousemove={cool} data-value={name.toUpperCase()}>
+    {name.toUpperCase()}
+  </h1>
   <div class="typewriter text-white flex flex-row text-xl gap-1">
     <Typewriter interval={70} mode="loop">
       <span>exploring</span>
@@ -68,21 +70,6 @@
   .typewriter {
     --cursor-color: #ffffff;
     --cursor-width: 0.2rem;
-  }
-  .hero {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    justify-content: center;
-    align-items: center;
-  }
-  /* change for small screens */
-  @media (max-width: 640px) {
-    .hero {
-      height: 50vh;
-    }
   }
   h1 {
     font-family: 'Space Mono', monospace;
