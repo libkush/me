@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { getPosts } from '$lib/posts';
 import { json } from '@sveltejs/kit';
+export const prerender = false;
 
 export const GET = (async ({ url }) => {
   const page = url.searchParams.get('page') || '1';
