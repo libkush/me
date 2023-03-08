@@ -6,7 +6,8 @@
   import PostDate from '$lib/components/PostDate.svelte';
   import type { ComponentType, SvelteComponentTyped } from 'svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
-  import MyImage from '$lib/assets/avatar.jpg?width=672&webp'
+  // @ts-ignore
+  import MyImage from '$lib/assets/avatar.jpg?width=672&webp';
 
   type Data = {
     post: App.BlogPost;
@@ -96,19 +97,19 @@
 
     <!-- bio -->
     <hr />
-    <div class="py-8">
+    <footer class="py-4">
       <div class="grid">
         <div class="flex justify-center order-1 col-span-2 gap-6 md:order-2">
           <SocialLinks />
         </div>
         <div class="flex justify-center order-2 md:order-1 md:col-span-2">
-          <a href="/" class="inline-block rounded-full">
+          <a href="/" class="inline-block rounded-full my-auto mx-4">
             <img
               loading="lazy"
               decoding="async"
               src={MyImage}
               alt={name}
-              class="w-24 h-24 mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
+              class="w-24 h-24 md:mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
             />
           </a>
         </div>
@@ -116,7 +117,7 @@
           {bio}
         </p>
       </div>
-    </div>
+    </footer>
   </div>
 
   <!-- table of contents -->
