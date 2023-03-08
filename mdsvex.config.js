@@ -14,6 +14,7 @@ const config = defineConfig({
   },
   remarkPlugins: [
     videos,
+    images,
     relativeImages,
     headings,
     emoji,
@@ -58,6 +59,24 @@ function videos() {
   };
 }
 
+function images() {
+  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'svg'];
+  return function transformer(tree) {
+    visit(tree, 'image', (node) => {
+      if (extensions.some((ext) => node.url.endsWith(ext))) {
+        node.type = 'html';
+        node.value = `
+            <img 
+              src="${node.url}?width=900&webp"
+              loading="lazy"
+              decoding="async"
+              alt="${node.alt}"
+            />
+          `;
+      }
+    });
+  };
+}
 function headings() {
   return function transformer(tree, vfile) {
     // run remark-headings plugin

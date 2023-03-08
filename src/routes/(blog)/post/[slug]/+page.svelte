@@ -1,11 +1,12 @@
 <script lang="ts">
-  import { website, name, bio, avatar } from '$lib/info';
+  import { website, name, bio } from '$lib/info';
   import ToC from '$lib/components/ToC.svelte';
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
   import { afterNavigate } from '$app/navigation';
   import PostDate from '$lib/components/PostDate.svelte';
   import type { ComponentType, SvelteComponentTyped } from 'svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
+  import MyImage from '$lib/assets/avatar.jpg?width=672&webp'
 
   type Data = {
     post: App.BlogPost;
@@ -103,7 +104,9 @@
         <div class="flex justify-center order-2 md:order-1 md:col-span-2">
           <a href="/" class="inline-block rounded-full">
             <img
-              src={avatar}
+              loading="lazy"
+              decoding="async"
+              src={MyImage}
               alt={name}
               class="w-24 h-24 mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
             />
