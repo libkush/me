@@ -38,7 +38,7 @@
 
 <Blob />
 <section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
-  <h1>HI, I'M</h1>
+  <h1>hi, i'm</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
   <h1 style="color: #67e8f9" on:mousemove={cool} data-value={name.toUpperCase()}>
     {name.toUpperCase()}
@@ -57,9 +57,9 @@
 <div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
   <section class="w-full">
     <div class="flex items-center justify-between gap-4 mb-8">
-      <h2 class="text-xl font-medium sm:text-base text-zinc-200">Recently Published</h2>
+      <h2 class="text-xl font-medium sm:text-base text-zinc-200">recently published</h2>
       <a href="/posts" class="flex items-center gap-1 text-base font-medium text-cyan-500"
-        >View All <ArrowRightIcon class="w-4 h-4" /></a
+        >view all <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>
     <PostsList posts={data.posts} />

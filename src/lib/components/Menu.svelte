@@ -39,7 +39,7 @@
         }}
         class="menu-item"
       >
-        Home
+        home
       </a>
       <a
         on:click={close}
@@ -50,7 +50,7 @@
         }}
         class="menu-item"
       >
-        Posts
+        posts
       </a>
       <a
         href="/about"
@@ -61,7 +61,7 @@
         }}
         class="menu-item"
       >
-        About
+        about
       </a>
       <a
         href="/talk"
@@ -72,7 +72,7 @@
         }}
         class="menu-item"
       >
-        Talk
+        talk
       </a>
     </div>
     <div id="menu-background-pattern" />
