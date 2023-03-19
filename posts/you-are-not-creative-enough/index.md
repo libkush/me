@@ -35,6 +35,6 @@ Seems simple eh? Well let's start with some basic imagination
 
 ## ouch
 
-![thinker](index/999c780d28060c0c0ebe02bf84bafc40e71acd67.png)
+![thinker](./thinker.png)
 
 So your brain hurts now. It's as if . . . as if it can't just think anymore. It hit the boundary of imagination. Are you creative enough? I don't think so. There is always THE BOX at some point because you can't think out of THE BOX of our UNIVERSE. Anyways, to be open to possibilities, email me if you ever come up with something out of THE BOX.
