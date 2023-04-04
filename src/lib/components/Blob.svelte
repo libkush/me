@@ -127,7 +127,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(7vmax);
+    backdrop-filter: blur(5vmax);
   }
   .blob {
     position: absolute;
