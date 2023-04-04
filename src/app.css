@@ -43,6 +43,6 @@
   }
   .social:hover {
     @apply text-cyan-500;
-    filter: drop-shadow(0px 0px 3px rgb(20 184 166));
+    filter: drop-shadow(0px 0px 1px rgb(20 184 166));
   }
 }
