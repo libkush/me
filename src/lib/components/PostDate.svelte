@@ -12,7 +12,7 @@
 <div class={['relative z-10 mb-3 flex text-zinc-300', _class].join(' ')} class:pb-2={decorate}>
   {#if decorate}
     <span class="absolute inset-x-0 bottom-0 flex items-center" aria-hidden="true">
-      <span class="h-0.5 w-3/4 rounded-full bg-zinc-500" />
+      <span class="h-[0.05rem] w-3/4 rounded-full bg-zinc-100/40" />
     </span>
   {/if}
   <div class="flex" class:flex-col={!collapsed}>
