@@ -16,7 +16,7 @@
     <div class="text-base font-semibold tracking-tight text-zinc-100">
       {#if href}
         <div
-          class="absolute z-0 transition scale-95 opacity-0 -inset-y-6 -inset-x-4  group-hover:scale-100 group-hover:opacity-50 bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
+          class="absolute z-0 transition opacity-10 -inset-y-6 -inset-x-4  group-hover:opacity-30 bg-white/50 sm:-inset-x-6 sm:rounded-2xl"
         />
         <a {href} data-sveltekit-preload-data="hover">
           <span class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
