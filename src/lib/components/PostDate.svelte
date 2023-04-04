@@ -9,10 +9,10 @@
   export { _class as class };
 </script>
 
-<div class={['relative z-10 mb-3 flex text-zinc-300', _class].join(' ')} class:pl-3.5={decorate}>
+<div class={['relative z-10 mb-3 flex text-zinc-300', _class].join(' ')} class:pb-2={decorate}>
   {#if decorate}
-    <span class="absolute inset-y-0 left-0 flex items-center py-1" aria-hidden="true">
-      <span class="h-full w-0.5 rounded-full bg-zinc-500" />
+    <span class="absolute inset-x-0 bottom-0 flex items-center" aria-hidden="true">
+      <span class="h-0.5 w-3/4 rounded-full bg-zinc-500" />
     </span>
   {/if}
   <div class="flex" class:flex-col={!collapsed}>
