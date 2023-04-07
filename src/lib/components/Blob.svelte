@@ -3,10 +3,6 @@
   import { createNoise2D } from 'simplex-noise';
   import { onMount } from 'svelte';
 
-  let startColor = 'hsl(0, 100%, 75%)';
-  let stopColor = 'hsl(0, 100%, 75%)';
-
-  let blob: SVGElement | null = null;
   let path: SVGPathElement | null = null;
 
   function createPoints() {
@@ -43,7 +39,6 @@
     return noise2D(x, y);
   }
 
-  let hueNoiseOffset = 0;
   let noiseStep = 0.005;
 
   const points = createPoints();
@@ -67,26 +62,13 @@
         point.noiseOffsetY += noiseStep;
       }
 
-      const hueNoise = noise(hueNoiseOffset, hueNoiseOffset);
-      const hue = map(hueNoise, -1, 1, 0, 360);
-
-      startColor = `hsl(${hue}, 100%, 75%)`;
-      stopColor = `hsl(${hue + 90}, 100%, 75%)`;
-
-      hueNoiseOffset += noiseStep / 3;
-
       requestAnimationFrame(animate);
     })();
   });
 </script>
 
 <div class="backdrop" />
-<svg
-  class="blob"
-  style="--startColor:{startColor};--stopColor:{stopColor}"
-  bind:this={blob}
-  viewBox="0 0 200 200"
->
+<svg class="blob" viewBox="0 0 200 200">
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
       <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
@@ -107,6 +89,8 @@
     z-index: -1;
   }
   .blob {
+    --startColor: #3e8fb0;
+    --stopColor: #ea9a97;
     position: absolute;
     left: 50%;
     top: 50%;
