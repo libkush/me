@@ -69,7 +69,7 @@
     <div class="sticky top-0 w-full flex justify-end pt-11 pr-8">
       <svelte:element
         this={canGoBack ? 'button' : 'a'}
-        class="items-center justify-center hidden w-10 h-10 mb-8 transition rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-zinc-800/5 ring-1 border border-zinc-700/50 bg-zinc-800 focus-visible:ring-2 ring-white/10 hover:border-zinc-700 hover:ring-white/20"
+        class="items-center justify-center hidden w-10 h-10 mb-8 transition rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-zinc-800/5 ring-1 border border-zinc-700/50 focus-visible:ring-2 ring-white/10 hover:border-zinc-700 hover:ring-white/20"
         href={canGoBack ? undefined : '/posts'}
         aria-label="Go back to posts"
         on:click={goBack}

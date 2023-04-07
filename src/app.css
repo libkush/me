@@ -5,12 +5,12 @@
 
 @layer base {
   body {
-    background-color: #1d1d1f;
+    background-color: #1f1d2e;
     margin: 0;
     padding: 0;
     overflow-y: overlay;
     font-family: sans-serif;
-    @apply text-zinc-400;
+    color: #e0def4;
   }
 
   /* change scrollbar */
@@ -28,7 +28,7 @@
   h4,
   h5,
   h6 {
-    @apply text-zinc-200;
+    color: #e0def4;
   }
 
   hr {
@@ -42,7 +42,6 @@
     cursor: pointer;
   }
   .social:hover {
-    @apply text-cyan-500;
-    filter: drop-shadow(0px 0px 1px rgb(20 184 166));
+    color: #eb6f92;
   }
 }

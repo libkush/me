@@ -48,17 +48,6 @@
 
   const points = createPoints();
 
-  function movePointer(event: MouseEvent): void {
-    const { clientX, clientY } = event;
-    blob?.animate(
-      {
-        left: `${clientX}px`,
-        top: `${clientY}px`
-      },
-      { duration: 3000, fill: 'forwards' }
-    );
-  }
-
   onMount(() => {
     (function animate() {
       path?.setAttribute('d', spline(points, 1, true));
@@ -91,43 +80,31 @@
   });
 </script>
 
-<svelte:window on:mousemove={movePointer} />
-<div id="container">
-  <div class="backdrop" />
-  <svg
-    class="blob"
-    style="--startColor:{startColor};--stopColor:{stopColor}"
-    bind:this={blob}
-    viewBox="0 0 200 200"
-  >
-    <defs>
-      <linearGradient id="gradient" gradientTransform="rotate(90)">
-        <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
-        <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
-      </linearGradient>
-    </defs>
-    <path bind:this={path} d="" fill="url('#gradient')" />
-  </svg>
-</div>
+<div class="backdrop" />
+<svg
+  class="blob"
+  style="--startColor:{startColor};--stopColor:{stopColor}"
+  bind:this={blob}
+  viewBox="0 0 200 200"
+>
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(90)">
+      <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
+      <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
+    </linearGradient>
+  </defs>
+  <path bind:this={path} d="" fill="url('#gradient')" />
+</svg>
 
 <style>
-  #container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    overflow: hidden;
-    z-index: -1;
-  }
   .backdrop {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 200%;
     backdrop-filter: blur(5vmax);
+    z-index: -1;
   }
   .blob {
     position: absolute;
@@ -139,7 +116,7 @@
     aspect-ratio: 1;
     translate: -50% -50%;
     opacity: 0.5;
-    z-index: -1;
+    z-index: -2;
   }
   /* dont show on mobile screens */
   @media (max-width: 600px) {

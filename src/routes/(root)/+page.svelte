@@ -40,10 +40,10 @@
 <section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
   <h1>hi, i'm</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 style="color: #67e8f9" on:mousemove={cool} data-value={name.toUpperCase()}>
+  <h1 style="color: #ebbcba" on:mousemove={cool} data-value={name.toUpperCase()}>
     {name.toUpperCase()}
   </h1>
-  <div class="typewriter text-white flex flex-row text-xl gap-1">
+  <div class="typewriter flex flex-row text-xl gap-1">
     <Typewriter interval={70} mode="loop">
       <span>exploring</span>
       <span>learning</span>
@@ -58,7 +58,7 @@
   <section class="w-full">
     <div class="flex items-center justify-between gap-4 mb-8">
       <h2 class="text-xl font-medium sm:text-base text-zinc-200">recently published</h2>
-      <a href="/posts" class="flex items-center gap-1 text-base font-medium text-cyan-500"
+      <a href="/posts" class="flex items-center gap-1 text-base font-medium text-[#9ccfd8]"
         >view all <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>

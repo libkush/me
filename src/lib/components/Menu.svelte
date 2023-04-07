@@ -81,7 +81,7 @@
 
 <style>
   #menu {
-    background-color: #1d1d1f;
+    background-color: #1f1d2e;
     align-items: center;
     display: flex;
     height: 100vh;

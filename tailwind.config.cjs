@@ -44,8 +44,8 @@ module.exports = {
       },
       DEFAULT: {
         css: {
-          '--tw-prose-body': theme('colors.zinc.600'),
-          '--tw-prose-headings': theme('colors.zinc.900'),
+          '--tw-prose-body': '#6e6a86',
+          '--tw-prose-headings': '#e0def4',
           '--tw-prose-links': theme('colors.teal.500'),
           '--tw-prose-links-hover': theme('colors.teal.600'),
           '--tw-prose-underline': theme('colors.teal.500 / 0.2'),
