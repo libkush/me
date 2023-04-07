@@ -40,7 +40,7 @@
 <section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
   <h1>hi, i'm</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 style="color: #ebbcba" on:mousemove={cool} data-value={name.toUpperCase()}>
+  <h1 style="color: #f6c177" on:mousemove={cool} data-value={name.toUpperCase()}>
     {name.toUpperCase()}
   </h1>
   <div class="typewriter flex flex-row text-xl gap-1">

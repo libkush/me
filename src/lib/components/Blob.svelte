@@ -5,6 +5,9 @@
 
   let path: SVGPathElement | null = null;
 
+  let startColor = '#ea9a97';
+  let stopColor = '#3e8fb0';
+
   function createPoints() {
     const points = [];
     const numPoints = 6;
@@ -68,7 +71,7 @@
 </script>
 
 <div class="backdrop" />
-<svg class="blob" viewBox="0 0 200 200">
+<svg style="--startColor:{startColor};--stopColor:{stopColor}" class="blob" viewBox="0 0 200 200">
   <defs>
     <linearGradient id="gradient" gradientTransform="rotate(90)">
       <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
@@ -89,8 +92,6 @@
     z-index: -1;
   }
   .blob {
-    --startColor: #3e8fb0;
-    --stopColor: #ea9a97;
     position: absolute;
     left: 50%;
     top: 50%;

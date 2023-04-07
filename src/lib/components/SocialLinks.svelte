@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-row gap-6 m-8">
-  <a href="https://github.com/{githubUsername}" aria-label="Open {firstName}'s Github Profile">
+  <a href="{website}talk" aria-label="Open {firstName}'s Github Profile">
     <svg
       class="social"
       xmlns="http://www.w3.org/2000/svg"
