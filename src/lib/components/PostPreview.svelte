@@ -16,8 +16,8 @@
     {@html post.preview.html}
   </div>
   <div slot="actions">
-    <div class="flex items-center text-[#9ccfd8]">
-      <span class="text-sm font-medium">Read</span>
+    <div class="flex items-center">
+      <h3 class="text-[#9ccfd8]">Read</h3>
       <ArrowRightIcon class="w-4 h-4 ml-1" />
     </div>
   </div>
