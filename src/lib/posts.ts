@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { format } from 'date-fns';
 import { parse } from 'node-html-parser';
-import readTimeEstimate from 'read-time-estimate';
+import readTime from '$lib/readTime';
 
 if (browser) {
   throw new Error(`posts can only be imported server-side`);
@@ -22,7 +22,7 @@ export async function getPosts(
     const htmlString = (post as any).default.render().html;
     const html = parse(htmlString);
     const preview = post.metadata.preview ? parse(post.metadata.preview) : html.querySelector('p');
-    const { humanizedDuration } = readTimeEstimate(htmlString);
+    const { humanizedDuration } = readTime(htmlString, ['img', 'figure']);
     return {
       slug: path
         .replace(/(\/index)?\.md/, '')

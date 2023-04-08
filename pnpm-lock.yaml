@@ -22,9 +22,6 @@ dependencies:
   node-html-parser:
     specifier: ^6.1.5
     version: 6.1.5
-  read-time-estimate:
-    specifier: ^0.0.3
-    version: 0.0.3
   rehype-autolink-headings:
     specifier: ^6.1.1
     version: 6.1.1
@@ -2045,10 +2042,6 @@ packages:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
     dependencies:
       pify: 2.3.0
-
-  /read-time-estimate@0.0.3:
-    resolution: {integrity: sha512-TF87eHTuEyRtu/mwnQE8FoZYHpsN1Oj+U/oROL5nrsoEWsh/iGhBzkV50N6DdPEqZ9Jh2PSZk1ZA7KMucgb+ng==}
-    dev: false
 
   /readable-stream@3.6.2:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
