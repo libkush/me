@@ -7,7 +7,11 @@
 
 <Card href={`/post/${post.slug}`}>
   <slot slot="eyebrow" name="eyebrow" />
-  <slot slot="title">{post.title}</slot>
+  <slot slot="title">
+    <h3>
+      {post.title}
+    </h3>
+  </slot>
   <div slot="description" class="prose dark:prose-invert">
     {@html post.preview.html}
   </div>

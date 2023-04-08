@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     overflow-y: overlay;
-    font-family: sans-serif;
+    font-family: 'Roboto Mono', monospace;
     color: #e0def4;
   }
 
@@ -29,6 +29,7 @@
   h5,
   h6 {
     color: #e0def4;
+    font-family: 'Space Mono', monospace;
   }
 
   hr {
