@@ -23,6 +23,7 @@ declare namespace App {
     slug: string;
     title: string;
     preview: { html: string; text: string };
+    readingTime: string;
     headings: BlogPostHeading[];
     date: string;
     metaDate: string;

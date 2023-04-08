@@ -1,6 +1,7 @@
 import { browser } from '$app/environment';
 import { format } from 'date-fns';
 import { parse } from 'node-html-parser';
+import readTimeEstimate from 'read-time-estimate';
 
 if (browser) {
   throw new Error(`posts can only be imported server-side`);
@@ -18,8 +19,10 @@ export async function getPosts(
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
   const awaitingPosts = entries.map(async ([path, resolver]) => {
     const post = await resolver();
-    const html = parse((post as any).default.render().html);
+    const htmlString = (post as any).default.render().html;
+    const html = parse(htmlString);
     const preview = post.metadata.preview ? parse(post.metadata.preview) : html.querySelector('p');
+    const { humanizedDuration } = readTimeEstimate(htmlString);
     return {
       slug: path
         .replace(/(\/index)?\.md/, '')
@@ -34,6 +37,8 @@ export async function getPosts(
         html: preview?.toString(),
         text: preview?.structuredText ?? preview?.toString()
       },
+      readingTime: humanizedDuration,
+
       ...(post as App.MdsvexFile).metadata
     } as App.PostData;
   });
