@@ -32,14 +32,11 @@
     font-family: 'Space Mono', monospace;
   }
 
-  hr {
-    @apply border-zinc-700/25;
-  }
   .social {
     width: 2rem;
     height: 2rem;
     stroke-width: 2;
-    @apply text-white;
+    @apply text-rosePine-text;
     cursor: pointer;
   }
   .social:hover {

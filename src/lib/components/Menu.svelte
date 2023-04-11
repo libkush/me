@@ -79,9 +79,9 @@
   </div>
 {/if}
 
-<style>
+<style lang="postcss">
   #menu {
-    background-color: #1f1d2e;
+    @apply bg-rosePine-base;
     align-items: center;
     display: flex;
     height: 100vh;
@@ -113,7 +113,7 @@
   }
 
   #menu-background-pattern {
-    background-image: radial-gradient(rgba(0, 180, 177, 0.1) 9%, transparent 9%);
+    background-image: radial-gradient(rgba(235, 111, 146, 0.1) 9%, transparent 9%);
     background-position: 0% 0%;
     background-size: 12vmin 12vmin;
     height: 100vh;

@@ -13,10 +13,10 @@
   <slot name="eyebrow" />
 
   {#if $$slots.title}
-    <div class="text-base font-semibold tracking-tight text-zinc-100">
+    <div class="text-base font-semibold tracking-tight">
       {#if href}
         <div
-          class="absolute z-0 transition opacity-80 -inset-y-6 -inset-x-4  group-hover:opacity-100 bg-[#26233a] shadow-xl sm:-inset-x-6 sm:rounded-2xl rounded-md"
+          class="absolute z-0 transition opacity-80 -inset-y-6 -inset-x-4  group-hover:opacity-100 bg-rosePine-overlay shadow-xl sm:-inset-x-6 sm:rounded-2xl rounded-md"
         />
         <a {href} data-sveltekit-preload-data="hover">
           <span class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
@@ -31,7 +31,7 @@
   {/if}
 
   {#if $$slots.description}
-    <div class="relative z-10 flex-1 text-sm text-[#232136]" class:mt-2={!!$$slots.title}>
+    <div class="relative z-10 flex-1 text-sm" class:mt-2={!!$$slots.title}>
       <slot name="description" />
     </div>
   {/if}

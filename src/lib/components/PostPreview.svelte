@@ -8,16 +8,16 @@
 <Card href={`/post/${post.slug}`}>
   <slot slot="eyebrow" name="eyebrow" />
   <slot slot="title">
-    <h3>
+    <h3 class="text-rosePine-iris">
       {post.title}
     </h3>
   </slot>
-  <div slot="description" class="prose dark:prose-invert">
+  <div slot="description" class="prose">
     {@html post.preview.html}
   </div>
   <div slot="actions">
     <div class="flex items-center">
-      <h3 class="text-[#9ccfd8]">Read</h3>
+      <h3 class="text-rosePine-foam">Read</h3>
       <ArrowRightIcon class="w-4 h-4 ml-1" />
     </div>
   </div>
