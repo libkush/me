@@ -5,12 +5,11 @@
 
 @layer base {
   body {
-    background-color: #191724;
     margin: 0;
     padding: 0;
     overflow-y: overlay;
     font-family: 'Roboto Mono', monospace;
-    color: #e0def4;
+    @apply bg-rosePine-base text-rosePine-text;
   }
 
   /* change scrollbar */
@@ -28,7 +27,6 @@
   h4,
   h5,
   h6 {
-    color: #e0def4;
     font-family: 'Space Mono', monospace;
   }
 
@@ -36,10 +34,7 @@
     width: 2rem;
     height: 2rem;
     stroke-width: 2;
-    @apply text-rosePine-text;
     cursor: pointer;
-  }
-  .social:hover {
-    color: #eb6f92;
+    @apply text-rosePine-text hover:text-rosePine-love;
   }
 }

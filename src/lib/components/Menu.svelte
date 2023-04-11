@@ -139,7 +139,6 @@
   }
 
   .menu-item {
-    color: white;
     cursor: pointer;
     display: block;
     font-family: 'Noto Sans Mono', monospace;
@@ -147,6 +146,7 @@
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     text-decoration: none;
     transition: opacity 400ms ease;
+    @apply text-rosePine-text;
   }
   nav[data-open='true'] {
     position: fixed;

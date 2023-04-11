@@ -40,7 +40,7 @@
 <section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
   <h1>hi, i'm</h1>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 style="color: #f6c177" on:mousemove={cool} data-value={name.toUpperCase()}>
+  <h1 class="text-rosePine-gold" on:mousemove={cool} data-value={name.toUpperCase()}>
     {name.toUpperCase()}
   </h1>
   <div class="typewriter flex flex-row text-xl gap-1">
@@ -75,7 +75,6 @@
     font-family: 'Space Mono', monospace;
     font-size: clamp(3rem, 10vw, 10rem);
     font-weight: 800;
-    color: white;
     border-radius: clamp(0.4rem, 0.75vw, 1rem);
     margin: 0;
   }

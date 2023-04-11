@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../../app.css';
+  import '../../app.postcss';
   import '../../prism.css';
   import { page } from '$app/stores';
   import Menu from '$lib/components/Menu.svelte';
