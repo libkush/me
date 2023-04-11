@@ -54,11 +54,11 @@
   </div>
   <SocialLinks />
 </section>
-<div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
+<div class="flex flex-col flex-grow sm:w-3/4 sm:m-auto m-6 gap-8 pb-16">
   <section class="w-full">
-    <div class="flex items-center justify-between gap-4 mb-8">
-      <h2 class="text-xl font-medium sm:text-base text-rosePine-iris">recently published</h2>
-      <a href="/posts" class="flex items-center gap-1 text-base font-medium text-rosePine-foam"
+    <div class="flex items-center justify-between gap-8 p-0 mx-0 mb-8">
+      <h2 class="text-xl text-rosePine-iris">recently published</h2>
+      <a href="/posts" class="flex items-center gap-1 text-xl text-rosePine-foam"
         >view all <ArrowRightIcon class="w-4 h-4" /></a
       >
     </div>

@@ -8,7 +8,7 @@
 <Card href={`/post/${post.slug}`}>
   <slot slot="eyebrow" name="eyebrow" />
   <slot slot="title">
-    <h3 class="text-rosePine-iris">
+    <h3 class="text-rosePine-iris text-xl">
       {post.title}
     </h3>
   </slot>

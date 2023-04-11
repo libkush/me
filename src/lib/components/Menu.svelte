@@ -141,7 +141,7 @@
   .menu-item {
     cursor: pointer;
     display: block;
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Space Mono', monospace;
     font-size: clamp(3rem, 8vw, 8rem);
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     text-decoration: none;

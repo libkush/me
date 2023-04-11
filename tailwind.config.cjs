@@ -63,7 +63,8 @@ module.exports = {
 
           // Base
           color: 'var(--tw-prose-body)',
-          lineHeight: theme('lineHeight.7'),
+          fontSize: theme('fontSize.lg')[0],
+          lineHeight: theme('lineHeight.9'),
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10')
@@ -79,13 +80,13 @@ module.exports = {
             fontWeight: theme('fontWeight.semibold')
           },
           h2: {
-            fontSize: theme('fontSize.xl')[0],
+            fontSize: theme('fontSize.2xl')[0],
             lineHeight: theme('lineHeight.7'),
             marginTop: theme('spacing.20'),
             marginBottom: theme('spacing.4')
           },
           h3: {
-            fontSize: theme('fontSize.base')[0],
+            fontSize: theme('fontSize.xl')[0],
             lineHeight: theme('lineHeight.7'),
             marginTop: theme('spacing.16'),
             marginBottom: theme('spacing.4')

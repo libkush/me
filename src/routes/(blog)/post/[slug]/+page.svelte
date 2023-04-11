@@ -115,7 +115,7 @@
             />
           </a>
         </div>
-        <p class="order-3 text-base text-rosePine-subtle">
+        <p class="flex justify-center order-3 text-base text-rosePine-subtle">
           {bio}
         </p>
       </div>
