@@ -30,7 +30,7 @@
 
     const visibleIndex =
       elements.findIndex((element) => {
-        if (element) return element.offsetTop + element.clientHeight > scrollY;
+        if (element) return element.offsetTop - 100 + element.clientHeight > scrollY;
       }) - 1;
 
     activeHeading = headings[visibleIndex];
@@ -52,7 +52,7 @@
 
 <Card>
   <slot slot="description">
-    <ul class="flex flex-col gap-2">
+    <ul class="flex text-base flex-col gap-2">
       {#each headings as heading}
         <li
           class="pl-2 transition-colors border-rosePine-pine heading text-rosePine-highlightHigh hover:text-rosePine-text"
