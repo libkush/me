@@ -54,7 +54,7 @@
   </div>
   <SocialLinks />
 </section>
-<div class="flex flex-col flex-grow sm:w-3/4 sm:m-auto m-6 gap-8 pb-16">
+<div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
   <section class="w-full">
     <div class="flex items-center justify-between gap-8 p-0 mx-0 mb-8">
       <h2 class="text-xl text-rosePine-iris">recently published</h2>
