@@ -8,11 +8,11 @@
 <Card href={`/post/${post.slug}`}>
   <slot slot="eyebrow" name="eyebrow" />
   <slot slot="title">
-    <h3 class="text-rosePine-iris text-xl">
+    <h3 class="text-rosePine-iris text-lg">
       {post.title}
     </h3>
   </slot>
-  <div slot="description" class="prose">
+  <div slot="description" class="prose text-base">
     {@html post.preview.html}
   </div>
   <div slot="actions">

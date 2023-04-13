@@ -19,7 +19,7 @@
     </span>
   {/if}
   <div class="flex" class:flex-col={!collapsed}>
-    <time class="font-bold" datetime={post.date}>
+    <time class="font-bold text-base" datetime={post.date}>
       {format(new Date(parseISO(post.date)), 'MMMM d, yyyy').toLowerCase()}
     </time>
     {#if collapsed}
