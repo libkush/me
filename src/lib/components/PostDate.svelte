@@ -25,6 +25,6 @@
     {#if collapsed}
       <span class="mx-1">•</span>
     {/if}
-    <span class="text-rosePine-rose">{post.readingTime} read</span>
+    <span class="text-rosePine-text">{post.readingTime} read</span>
   </div>
 </div>

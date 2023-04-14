@@ -5,8 +5,8 @@
 
   let path: SVGPathElement | null = null;
 
-  let startColor = '#ea9a97';
-  let stopColor = '#3e8fb0';
+  let startColor = '#31748f';
+  let stopColor = '#ebbcba';
 
   function createPoints() {
     const points = [];

@@ -8,18 +8,15 @@
 <svelte:element
   this={as}
   data-sveltekit-preload-data="hover"
-  class={['relative flex flex-col items-start group', _class].join(' ')}
+  class={['flex flex-col items-start group', _class].join(' ')}
+  class:postcard={$$slots.title}
 >
   <slot name="eyebrow" />
-
   {#if $$slots.title}
     <div class="text-base font-semibold tracking-tight">
       {#if href}
-        <div
-          class="absolute z-0 transition opacity-80 -inset-y-6 -inset-x-4  group-hover:opacity-100 bg-rosePine-overlay shadow-xl sm:-inset-x-6 sm:rounded-2xl rounded-md"
-        />
         <a {href} data-sveltekit-preload-data="hover">
-          <span class="absolute z-20 -inset-y-6 -inset-x-4 sm:-inset-x-6 sm:rounded-2xl" />
+          <span class="absolute z-20 inset-y-0 inset-x-0" />
           <span class="relative z-10">
             <slot name="title" />
           </span>
@@ -42,3 +39,26 @@
     </div>
   {/if}
 </svelte:element>
+
+<style lang="postcss">
+  .postcard {
+    @apply p-8 m-0 rounded-xl -translate-y-2 bg-rosePine-overlay relative border-solid border-r-[1px] border-b-[1px] border-black/30;
+  }
+  .postcard:after {
+    content: '';
+    height: 100px;
+    width: 1px;
+    right: -1px;
+    top: 65%;
+    @apply absolute transition-[top,opacity] opacity-0 ease-in-out duration-700 bg-gradient-to-b from-transparent via-rosePine-love to-transparent;
+  }
+  .postcard:after {
+    top: 65%;
+    opacity: 0;
+  }
+
+  .postcard:hover:after {
+    top: 25%;
+    opacity: 1;
+  }
+</style>

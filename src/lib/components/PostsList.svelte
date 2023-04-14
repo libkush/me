@@ -5,7 +5,7 @@
   export let posts: App.BlogPost[];
 </script>
 
-<div class="flex flex-col gap-16 md:border-l md:pl-6 md:border-zinc-100/40">
+<div class="flex flex-col gap-4 md:border-l md:pl-6 md:border-zinc-100/40">
   {#each posts as post}
     <article class="grid items-start grid-cols-4 gap-8">
       <PostDate class="flex-col hidden md:flex" {post} decorate />
