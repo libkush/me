@@ -60,11 +60,11 @@ module.exports = {
           '--tw-prose-pre-border': 'transparent',
           '--tw-prose-th-borders': theme('colors.rosePine.text'),
           '--tw-prose-td-borders': theme('colors.rosePine.text'),
-
           // Base
           color: 'var(--tw-prose-body)',
           fontSize: theme('fontSize.lg')[0],
           lineHeight: theme('lineHeight.9'),
+          tracking: theme('letterSpacing.wide'),
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10')
@@ -72,6 +72,12 @@ module.exports = {
           p: {
             marginTop: theme('spacing.7'),
             marginBottom: theme('spacing.7')
+          },
+
+          h1: {
+            fontSize: theme('fontSize.4xl')[0],
+            lineHeight: theme('lineHeight.9'),
+            fontWeight: theme('fontWeight.bold')
           },
 
           // Headings

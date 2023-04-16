@@ -1,33 +1,24 @@
 <script lang="ts">
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  import Typed from 'typed.js';
   import PostsList from '$lib/components/PostsList.svelte';
+  import { onMount } from 'svelte';
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
-  import Typewriter from 'svelte-typewriter';
-  import SocialLinks from '$lib/components/SocialLinks.svelte';
-  import Blob from '$lib/components/Blob.svelte';
-  import { name, bio } from '$lib/info';
-  let interval: null | NodeJS.Timer = null;
-  const cool = (event: any) => {
-    let iteration = 0;
-    interval ? clearInterval(interval) : null;
-    interval = setInterval(() => {
-      event.target.innerText = event.target.innerText
-        .split('')
-        .map((letter: any, index: number) => {
-          if (index < iteration) {
-            return event.target.dataset.value[index];
-          }
-
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join('');
-      if (iteration >= event.target.dataset.value.length) {
-        interval ? clearInterval(interval) : null;
-      }
-      iteration += 1 / 3;
-    }, 30);
-  };
+  import uptime from '$lib/uptime';
+  import { name, bio, firstName, lastName, dob, discordURL, githubURL, website } from '$lib/info';
+  const { years, months, days } = uptime(dob);
   export let data: { posts: App.BlogPost[] };
+  const strings = ['explore', 'learn', 'break', 'create'];
+  onMount(() => {
+    const _ = new Typed('#type', {
+      strings,
+      loop: true,
+      typeSpeed: 40,
+      backSpeed: 40,
+      backDelay: 1500,
+      cursorChar: '_',
+      smartBackspace: true
+    });
+  });
 </script>
 
 <svelte:head>
@@ -36,22 +27,41 @@
   <meta property="og:description" content={bio} />
 </svelte:head>
 
-<section class="md:h-screen h-[50vh] w-full flex flex-col gap-0 justify-center items-center">
-  <h1 class="text-rosePine-iris">hi, i'm</h1>
+<section
+  class="md:w-3/5 md:h-screen md:m-auto md:p-0 py-24 px-8 flex flex-col gap-0 justify-center items-center"
+>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <h1 class="text-rosePine-rose" on:mousemove={cool} data-value={name.toUpperCase()}>
-    {name.toUpperCase()}
-  </h1>
-  <div class="text-rosePine-iris typewriter flex flex-row text-4xl gap-1">
-    <Typewriter interval={70} mode="loop">
-      <span>exploring</span>
-      <span>learning</span>
-      <span>creating</span>
-      <span>breaking</span>
-    </Typewriter>
-    <span>stuff.</span>
+  <div class="w-full flex md:flex-row flex-col items-center justify-center">
+    <div class="text-rosePine-text w-full text-7xl font-[800] leading-tight">
+      <h1>
+        {firstName}
+      </h1>
+      <h1>
+        {lastName}
+      </h1>
+      <br />
+      <p class="text-2xl font-light text-rosePine-iris"><i>»[…] student, developer, etc.</i></p>
+    </div>
+    <div
+      class="font-bold py-4 px-8 leading-6 text-lg w-full sm:m-auto m-6 rounded-lg bg-rosePine-overlay"
+    >
+      <pre class="py-4 px-0 ">
+<strong class="text-rosePine-love">~</strong> fetch
+
+<strong class="text-rosePine-love">kush@arch</strong>
+uptime    {years}y, {months}m, {days}d
+locale    en_IN
+pkgs      <a class="text-rosePine-rose" href={githubURL}>git</a>, <a
+          class="text-rosePine-rose"
+          href={discordURL}>dc</a
+        >, <a class="text-rosePine-rose" href="{website}talk">tok</a>
+smtp      kush@kush.in
+
+<strong class="text-rosePine-love">~</strong> <span id="type" />
+
+</pre>
+    </div>
   </div>
-  <SocialLinks />
 </section>
 <div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
   <section class="w-full">
@@ -64,17 +74,3 @@
     <PostsList posts={data.posts} />
   </section>
 </div>
-
-<style>
-  .typewriter {
-    --cursor-color: #ffffff;
-    --cursor-width: 0.2rem;
-  }
-  h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(3rem, 10vw, 10rem);
-    font-weight: 800;
-    border-radius: clamp(0.4rem, 0.75vw, 1rem);
-    margin: 0;
-  }
-</style>
