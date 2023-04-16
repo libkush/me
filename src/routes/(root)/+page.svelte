@@ -4,7 +4,17 @@
   import { onMount } from 'svelte';
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
   import uptime from '$lib/uptime';
-  import { name, bio, firstName, lastName, dob, discordURL, githubURL, website } from '$lib/info';
+  import {
+    name,
+    bio,
+    firstName,
+    lastName,
+    dob,
+    discordURL,
+    githubURL,
+    website,
+    email
+  } from '$lib/info';
   const { years, months, days } = uptime(dob);
   export let data: { posts: App.BlogPost[] };
   const strings = ['explore', 'learn', 'break', 'create'];
@@ -42,22 +52,17 @@
       <br />
       <p class="text-2xl font-light text-rosePine-iris"><i>»[…] student, developer, etc.</i></p>
     </div>
-    <div
-      class="font-bold py-4 px-8 leading-6 text-lg w-full sm:m-auto m-6 rounded-lg bg-rosePine-overlay"
-    >
-      <pre class="py-4 px-0 ">
-<strong class="text-rosePine-love">~</strong> fetch
+    <div class="terminal">
+      <pre>
+<strong>~</strong> fetch
 
-<strong class="text-rosePine-love">kush@arch</strong>
+<strong>kush@arch</strong>
 uptime    {years}y, {months}m, {days}d
 locale    en_IN
-pkgs      <a class="text-rosePine-rose" href={githubURL}>git</a>, <a
-          class="text-rosePine-rose"
-          href={discordURL}>dc</a
-        >, <a class="text-rosePine-rose" href="{website}talk">tok</a>
-smtp      kush@kush.in
+pkgs      <a href={githubURL}>git</a>, <a href={discordURL}>dc</a>, <a href="{website}talk">tok</a>
+smtp      <a href="mailto:{email}">{email}</a>
 
-<strong class="text-rosePine-love">~</strong> <span id="type" />
+<strong>~</strong> <span id="type" />
 
 </pre>
     </div>
@@ -74,3 +79,35 @@ smtp      kush@kush.in
     <PostsList posts={data.posts} />
   </section>
 </div>
+
+<style lang="postcss">
+  .terminal {
+    @apply font-bold py-4 px-8 leading-6 text-lg w-full sm:m-auto m-6 rounded-lg bg-rosePine-overlay relative border-solid border-r-[1px] border-b-[1px] border-black/30;
+  }
+  .terminal pre {
+    @apply py-4 px-0;
+  }
+  .terminal a {
+    @apply text-rosePine-rose;
+  }
+  .terminal:after {
+    content: '';
+    height: 100px;
+    width: 1px;
+    right: -1px;
+    top: 65%;
+    @apply absolute transition-[top,opacity] opacity-0 ease-in-out duration-700 bg-gradient-to-b from-transparent via-rosePine-love to-transparent;
+  }
+  .terminal:after {
+    top: 65%;
+    opacity: 0;
+  }
+
+  .terminal:hover:after {
+    top: 25%;
+    opacity: 1;
+  }
+  strong {
+    @apply text-rosePine-love;
+  }
+</style>
