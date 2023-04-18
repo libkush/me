@@ -6,7 +6,12 @@
 </script>
 
 <Menu />
-<div class="flex flex-col min-h-screen ">
+<svelte:head>
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" />
+</svelte:head>
+
+<div class="flex flex-col min-h-screen">
   <div class="flex flex-col flex-grow w-full px-4 py-16 md:py-2">
     <main
       class="flex flex-col flex-grow w-full mx-auto"
