@@ -8,7 +8,7 @@
 <svelte:element
   this={as}
   data-sveltekit-preload-data="hover"
-  class={['flex flex-col items-start group', _class].join(' ')}
+  class={['group flex flex-col items-start', _class].join(' ')}
   class:postcard={$$slots.title}
 >
   <slot name="eyebrow" />
@@ -16,7 +16,7 @@
     <div class="text-base font-semibold tracking-tight">
       {#if href}
         <a {href} data-sveltekit-preload-data="hover">
-          <span class="absolute z-20 inset-y-0 inset-x-0" />
+          <span class="absolute inset-x-0 inset-y-0 z-20" />
           <span class="relative z-10">
             <slot name="title" />
           </span>
@@ -34,7 +34,7 @@
   {/if}
 
   {#if $$slots.actions}
-    <div aria-hidden="true" class="relative z-10 flex items-center mt-4">
+    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center">
       <slot name="actions" />
     </div>
   {/if}
@@ -42,7 +42,7 @@
 
 <style lang="postcss">
   .postcard {
-    @apply p-8 m-0 rounded-xl -translate-y-2 bg-rosePine-overlay relative border-solid border-r-[1px] border-b-[1px] border-black/30;
+    @apply relative m-0 -translate-y-2 rounded-xl border-b-[1px] border-r-[1px] border-solid border-black/30 bg-rosePine-overlay p-8;
   }
   .postcard:after {
     content: '';
@@ -50,7 +50,7 @@
     width: 1px;
     right: -1px;
     top: 65%;
-    @apply absolute transition-[top,opacity] opacity-0 ease-in-out duration-700 bg-gradient-to-b from-transparent via-rosePine-love to-transparent;
+    @apply absolute bg-gradient-to-b from-transparent via-rosePine-love to-transparent opacity-0 transition-[top,opacity] duration-700 ease-in-out;
   }
   .postcard:after {
     top: 65%;

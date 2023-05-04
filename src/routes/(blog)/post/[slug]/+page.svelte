@@ -64,28 +64,28 @@
   <meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
-<div class="root max-w-2xl mx-auto lg:max-w-none">
-  <div class="hidden lg:block pt-8">
-    <div class="sticky top-0 w-full flex justify-end pt-11 pr-8">
+<div class="root mx-auto max-w-2xl lg:max-w-none">
+  <div class="hidden pt-8 lg:block">
+    <div class="sticky top-0 flex w-full justify-end pr-8 pt-11">
       <svelte:element
         this={canGoBack ? 'button' : 'a'}
-        class="items-center justify-center hidden w-10 h-10 mb-8 transition rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-rosePine-base/5 ring-1 border border-rosePine-surface/50 focus-visible:ring-2 ring-white/10 hover:border-rosePine-surface hover:ring-white/20"
+        class="group -left-16 -top-1 mb-8 hidden h-10 w-10 items-center justify-center rounded-full border border-rosePine-surface/50 shadow-md shadow-rosePine-base/5 ring-1 ring-white/10 transition hover:border-rosePine-surface hover:ring-white/20 focus-visible:ring-2 lg:flex"
         href={canGoBack ? undefined : '/posts'}
         aria-label="Go back to posts"
         on:click={goBack}
         on:keydown={goBack}
       >
         <ArrowLeftIcon
-          class="w-4 h-4 transition stroke-rosePine-muted group-hover:stroke-rosePine-text"
+          class="h-4 w-4 stroke-rosePine-muted transition group-hover:stroke-rosePine-text"
         />
       </svelte:element>
     </div>
   </div>
 
-  <div class="w-full mx-auto overflow-x-hidden">
+  <div class="mx-auto w-full overflow-x-hidden">
     <article>
       <header class="flex flex-col">
-        <h1 class="mt-6 mb-6 text-4xl font-bold tracking-tight text-rosePine-rose sm:text-5xl">
+        <h1 class="mb-6 mt-6 text-4xl font-bold tracking-tight text-rosePine-rose sm:text-5xl">
           {data.post.title}
         </h1>
         <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
@@ -101,21 +101,21 @@
     <hr />
     <footer class="py-4">
       <div class="grid">
-        <div class="flex justify-center order-1 col-span-2 gap-6 md:order-2">
+        <div class="order-1 col-span-2 flex justify-center gap-6 md:order-2">
           <SocialLinks />
         </div>
-        <div class="flex justify-center order-2 md:order-1 md:col-span-2">
-          <a href="/" class="inline-block rounded-full my-auto mx-4">
+        <div class="order-2 flex justify-center md:order-1 md:col-span-2">
+          <a href="/" class="mx-4 my-auto inline-block rounded-full">
             <img
               loading="lazy"
               decoding="async"
               src={MyImage}
               alt={name}
-              class="w-24 h-24 md:mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-rosePine-love"
+              class="h-24 w-24 rounded-full ring-2 ring-rosePine-love md:mx-auto md:h-28 md:w-28"
             />
           </a>
         </div>
-        <p class="flex justify-center order-3 text-base text-rosePine-subtle">
+        <p class="order-3 flex justify-center text-base text-rosePine-subtle">
           {bio}
         </p>
       </div>
@@ -123,8 +123,8 @@
   </div>
 
   <!-- table of contents -->
-  <div class="hidden xl:block pt-10">
-    <aside class="sticky hidden w-48 ml-8 xl:block top-8" aria-label="Table of Contents">
+  <div class="hidden pt-10 xl:block">
+    <aside class="sticky top-8 ml-8 hidden w-48 xl:block" aria-label="Table of Contents">
       <ToC post={data.post} />
     </aside>
   </div>

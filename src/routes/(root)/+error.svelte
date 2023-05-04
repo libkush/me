@@ -17,5 +17,5 @@
 </script>
 
 {#if status === 404 && error}
-  <div class="absolute w-full flex items-center justify-center h-full" />
+  <div class="absolute flex h-full w-full items-center justify-center" />
 {/if}

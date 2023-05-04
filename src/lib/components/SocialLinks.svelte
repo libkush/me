@@ -2,7 +2,7 @@
   import { discordID, email, firstName, githubUsername, website } from '$lib/info';
 </script>
 
-<div class="flex flex-row gap-6 m-8">
+<div class="m-8 flex flex-row gap-6">
   <a href="{website}talk" aria-label="Open {firstName}'s Github Profile">
     <svg
       class="social"

@@ -52,10 +52,10 @@
 
 <Card>
   <slot slot="description">
-    <ul class="flex text-base flex-col gap-2">
+    <ul class="flex flex-col gap-2 text-base">
       {#each headings as heading}
         <li
-          class="pl-2 transition-colors border-rosePine-pine heading text-rosePine-highlightHigh hover:text-rosePine-text"
+          class="heading border-rosePine-pine pl-2 text-rosePine-highlightHigh transition-colors hover:text-rosePine-text"
           class:active={activeHeading === heading}
           style={`--depth: ${
             // consider h1 and h2 at the same depth, as h1 will only be used for page title
@@ -75,6 +75,6 @@
   }
 
   .active {
-    @apply font-medium border-l-2 -ml-[2px] text-rosePine-text;
+    @apply -ml-[2px] border-l-2 font-medium text-rosePine-text;
   }
 </style>

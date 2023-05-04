@@ -11,10 +11,10 @@
   <link rel="preconnect" href="https://static.cloudflareinsights.com" />
 </svelte:head>
 
-<div class="flex flex-col min-h-screen">
-  <div class="flex flex-col flex-grow w-full px-4 py-16 md:py-2">
+<div class="flex min-h-screen flex-col">
+  <div class="flex w-full flex-grow flex-col px-4 py-16 md:py-2">
     <main
-      class="flex flex-col flex-grow w-full mx-auto"
+      class="mx-auto flex w-full flex-grow flex-col"
       class:max-w-2xl={!$page.data.layout?.fullWidth}
     >
       <slot />

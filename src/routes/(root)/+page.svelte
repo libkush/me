@@ -38,11 +38,11 @@
 </svelte:head>
 
 <section
-  class="md:w-3/5 md:h-screen md:m-auto md:p-0 py-24 px-8 flex flex-col gap-0 justify-center items-center"
+  class="flex flex-col items-center justify-center gap-0 px-8 py-24 md:m-auto md:h-screen md:w-3/5 md:p-0"
 >
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <div class="w-full flex md:flex-row flex-col items-center justify-center">
-    <div class="text-rosePine-text w-full text-7xl font-[800] leading-tight">
+  <div class="flex w-full flex-col items-center justify-center md:flex-row">
+    <div class="w-full text-7xl font-[800] leading-tight text-rosePine-text">
       <h1>
         {firstName}
       </h1>
@@ -68,12 +68,12 @@ smtp      <a href="mailto:{email}">{email}</a>
     </div>
   </div>
 </section>
-<div class="flex flex-col flex-grow sm:w-3/5 sm:m-auto m-6 gap-8 pb-16">
+<div class="m-6 flex flex-grow flex-col gap-8 pb-16 sm:m-auto sm:w-3/5">
   <section class="w-full">
-    <div class="flex items-center justify-between gap-8 p-0 mx-0 mb-8">
+    <div class="mx-0 mb-8 flex items-center justify-between gap-8 p-0">
       <span class="text-xl text-rosePine-iris">recently published</span>
       <a href="/posts" class="flex items-center gap-1 text-xl text-rosePine-foam"
-        >view all <ArrowRightIcon class="w-4 h-4" /></a
+        >view all <ArrowRightIcon class="h-4 w-4" /></a
       >
     </div>
     <PostsList posts={data.posts} />
@@ -82,10 +82,10 @@ smtp      <a href="mailto:{email}">{email}</a>
 
 <style lang="postcss">
   .terminal {
-    @apply font-bold py-4 px-8 leading-6 text-lg w-full sm:m-auto m-6 rounded-lg bg-rosePine-overlay relative border-solid border-r-[1px] border-b-[1px] border-black/30;
+    @apply relative m-6 w-full rounded-lg border-b-[1px] border-r-[1px] border-solid border-black/30 bg-rosePine-overlay px-8 py-4 text-lg font-bold leading-6 sm:m-auto;
   }
   .terminal pre {
-    @apply py-4 px-0;
+    @apply px-0 py-4;
   }
   .terminal a {
     @apply text-rosePine-rose;
@@ -96,7 +96,7 @@ smtp      <a href="mailto:{email}">{email}</a>
     width: 1px;
     right: -1px;
     top: 65%;
-    @apply absolute transition-[top,opacity] opacity-0 ease-in-out duration-700 bg-gradient-to-b from-transparent via-rosePine-love to-transparent;
+    @apply absolute bg-gradient-to-b from-transparent via-rosePine-love to-transparent opacity-0 transition-[top,opacity] duration-700 ease-in-out;
   }
   .terminal:after {
     top: 65%;

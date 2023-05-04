@@ -26,14 +26,14 @@
   $: posts = [...posts, ...newBatch];
 </script>
 
-<div class="flex flex-col h-screen flex-grow w-full sm:m-auto gap-8">
-  <section class="w-full h-full">
-    <div class="posts p-6 pt-16 overflow-x-hidden max-h-full flex flex-col">
+<div class="flex h-screen w-full flex-grow flex-col gap-8 sm:m-auto">
+  <section class="h-full w-full">
+    <div class="posts flex max-h-full flex-col overflow-x-hidden p-6 pt-16">
       {#each posts as post}
         <article
-          class="md:border-l py-2 md:pl-4 md:border-rosePine-text/40 md:w-3/5 m-auto grid items-start grid-cols-4 gap-8"
+          class="m-auto grid grid-cols-4 items-start gap-8 py-2 md:w-3/5 md:border-l md:border-rosePine-text/40 md:pl-4"
         >
-          <PostDate class="flex-col hidden md:flex text-sm" {post} decorate />
+          <PostDate class="hidden flex-col text-sm md:flex" {post} decorate />
           <div class="col-span-4 md:col-span-3">
             <PostPreview {post}>
               <slot slot="eyebrow">
@@ -65,6 +65,6 @@
     @apply w-2;
   }
   .posts::-webkit-scrollbar-thumb {
-    @apply bg-rosePine-pine rounded-[0.15rem];
+    @apply rounded-[0.15rem] bg-rosePine-pine;
   }
 </style>
