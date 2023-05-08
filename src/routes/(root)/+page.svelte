@@ -54,7 +54,7 @@
     </div>
     <div class="terminal">
       <pre>
-<strong>~</strong> fetch
+<strong>~</strong> man kush
 
 <strong>kush@arch</strong>
 uptime    {years}y, {months}m, {days}d
