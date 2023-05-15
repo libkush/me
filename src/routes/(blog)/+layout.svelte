@@ -6,10 +6,6 @@
 </script>
 
 <Menu />
-<svelte:head>
-  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" />
-</svelte:head>
 
 <div class="flex min-h-screen flex-col">
   <div class="flex w-full flex-grow flex-col px-4 py-16 md:py-2">
