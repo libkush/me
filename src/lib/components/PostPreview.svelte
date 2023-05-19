@@ -17,7 +17,7 @@
   </div>
   <div slot="actions">
     <div class="flex items-center">
-      <h3 class="text-rosePine-foam">Read</h3>
+      <span class="text-rosePine-foam">Read</span>
       <ArrowRightIcon class="ml-1 h-4 w-4" />
     </div>
   </div>
