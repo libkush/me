@@ -75,7 +75,7 @@ module.exports = {
           },
 
           h1: {
-            fontSize: theme('fontSize.4xl')[0],
+            fontSize: theme('fontSize.2xl')[0],
             lineHeight: theme('lineHeight.9'),
             fontWeight: theme('fontWeight.bold')
           },
