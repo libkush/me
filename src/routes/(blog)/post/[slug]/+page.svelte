@@ -8,6 +8,7 @@
   import SocialLinks from '$lib/components/SocialLinks.svelte';
   // @ts-ignore
   import MyImage from '$lib/assets/avatar.jpg?width=672&webp';
+  import Sign from '$lib/assets/sign.svelte';
 
   type Data = {
     post: App.BlogPost;
@@ -97,27 +98,15 @@
       </div>
     </article>
 
-    <!-- bio -->
     <hr />
     <footer class="py-4">
       <div class="grid">
-        <div class="order-1 col-span-2 flex justify-center gap-6 md:order-2">
+        <div class="col-span-2 flex justify-center">
+          <Sign />
+        </div>
+        <div class="col-span-2 flex justify-center gap-6">
           <SocialLinks />
         </div>
-        <div class="order-2 flex justify-center md:order-1 md:col-span-2">
-          <a href="/" class="mx-4 my-auto inline-block rounded-full">
-            <img
-              loading="lazy"
-              decoding="async"
-              src={MyImage}
-              alt={name}
-              class="h-24 w-24 rounded-full ring-2 ring-rosePine-love md:mx-auto md:h-28 md:w-28"
-            />
-          </a>
-        </div>
-        <p class="order-3 flex justify-center text-base text-rosePine-subtle">
-          {bio}
-        </p>
       </div>
     </footer>
   </div>
