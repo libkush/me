@@ -51,7 +51,7 @@ module.exports = {
           '--tw-prose-counters': theme('colors.rosePine.foam'),
           '--tw-prose-bullets': theme('colors.rosePine.foam'),
           '--tw-prose-hr': theme('colors.rosePine.rose'),
-          '--tw-prose-quote-borders': theme('colors.rosePine.rose'),
+          '--tw-prose-quote-borders': theme('colors.rosePine.iris'),
           '--tw-prose-captions': theme('colors.rosePine.muted'),
           '--tw-prose-code': theme('colors.rosePine.foam'),
           '--tw-prose-code-bg': theme('colors.zinc.300 / 0.2'),
@@ -153,6 +153,7 @@ module.exports = {
           blockquote: {
             paddingLeft: theme('spacing.6'),
             borderLeftWidth: theme('borderWidth.2'),
+            color: theme('colors.rosePine.iris.400'),
             borderLeftColor: 'var(--tw-prose-quote-borders)',
             fontStyle: 'italic'
           },
