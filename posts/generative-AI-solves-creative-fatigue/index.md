@@ -34,6 +34,8 @@ Have you ever felt that excruciating pain of having 100 things in your mind but 
 
 When I am developing an app. I spend half an hour just inside my brain thinking about how the various processes will work and giving a structure to the app itself. Now as soon as I open Neovim (I use vim in arch btw), I just kind of stare at the screen, quite frankly  ¯\\\_(ツ)_/¯. My brain is just so tired after all the thinking and planning that implementation seems like building a palace from scratch in just one go. But it doesn't have to be in one go. After days of procrastination and a sad realization of this fact, I eventually start with very basic stuff, while I had already forgotten 50% of the structure my brain had imagined earlier. 
 
+![getting_started](./getting_started.png)
+
 There are two hard things for any creative work:
 
 - idea
