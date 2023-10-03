@@ -12,8 +12,8 @@
     dob,
     discordURL,
     githubURL,
-    website,
-    email
+    email,
+    twtxt
   } from '$lib/info';
   const { years, months, days } = uptime(dob);
   export let data: { posts: App.BlogPost[] };
@@ -59,7 +59,7 @@
 <strong>kush@arch</strong>
 uptime    {years}y, {months}m, {days}d
 locale    en_IN
-pkgs      <a href={githubURL}>git</a>, <a href={discordURL}>dc</a>, <a href="{website}talk">tok</a>
+pkgs      <a href={githubURL}>git</a>, <a href={discordURL}>dc</a>, <a href={twtxt}>twtxt</a>
 smtp      <a href="mailto:{email}">{email}</a>
 
 <strong>~</strong> <span id="type" />
