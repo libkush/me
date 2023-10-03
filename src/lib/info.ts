@@ -6,6 +6,7 @@ export const githubUsername = 'Quat3rnion';
 export const githubURL = `https://github.com/${githubUsername}`;
 export const discordID = '788684047894839307';
 export const discordURL = `https://discordapp.com/users/${discordID}`;
+export const twtxt = 'https://twtxt.kush.in/'
 export const website = 'https://www.kush.in/';
 export const bio = `I'm ${name}, a student from India. I'm a full-stack developer working with Node.js, Deno, Flask, React, and Svelte. I'm learning new technologoies and building projects. I also have an interest in cyber-security and hacking. But above all, I hate describing myself, so that's it :)`;
 export const dob = '2006-04-05';
