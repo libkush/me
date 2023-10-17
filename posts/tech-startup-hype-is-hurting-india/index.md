@@ -7,7 +7,7 @@ published: true
 
 If you come across a headline like "[A 16-year-old Indian girl launched an AI company in 2022, it is now valued at Rs 100 crore](https://www.businesstoday.in/technology/news/story/16-year-old-indian-girl-launched-an-ai-company-in-2022-it-is-now-valued-at-rs-100-crore-401309-2023-10-10)" today, wouldn't you be surprised? How inspiring! India is growing, the kids here are extremely talented. Or is it :face_with_raised_eyebrow:?
 
-# this delve ai thing
+## this delve ai thing
 
 Pranjali Awasthi started an AI startup called [Delv AI](https://www.delv.ai/) that claims to "aid researchers in efficiently accessing specific information within the ever-expanding realm of online content." Whenever I hear bold and fancy claims like this, I always investigate what their product really is. Overuse of such claims in the Indian tech industry has made me a big skeptic. 
 
@@ -23,13 +23,13 @@ In fact, I just figured out that the screenshot which they are showing as an exa
 
 Alright, now moving on to what their "tech" startup really is according to me. This girl has used a number of open source LLMs, or paid API's from big AI companies like OpenAI's ChatGPT, open source products (Carrot2) and made a nice looking website to upload PDFs and a prompt UI to ask questions to the LLM (although I wouldn't really call it particularly "nice", it has design flaws). In fact, I could even pay a freelancer to make this crap in a week's time and it would be better.
 
-# from a long trail of scams
+## from a long trail of scams
 
 Money-laundering scam startups is nothing new in India (and even elsehwere). I stumbled upon an absolutely horrendous scam called "Qpi Techonology" that made utter ludicrous claims about using "quantum simulations to make high energy density solid-state batteries". In fact, if you happen to visit their [website](https://qpitech.holdings/), which looks more suspicious than a microsoft tech support scam, every other sentence uses the words "quantum" and "AI" in it. They literally boast about everything ranging from SSBs, cloud infrastructure, quantum computers, semiconductors and what not. 
 
 The sad thing about this fraudulent startup nexus is that the naive media [showcases them](https://www.livemint.com/brand-stories/qpivolta-announces-india-s-first-indigenous-high-energy-density-lithium-metal-based-ssb-pouch-cell-11678083287215.html) as real innovation to create an optimistic narrative to lure foreign investors.
 
-# the not-so-scam startups
+## the not-so-scam startups
 
 Alright, I get it. These are just scams that will obviously be exposed at some point. But what about the real startups? Isn't India producing an insane amount of unicorns every year? What about the e-commerce, fintech, edtech startups that are booming up? 
 
@@ -47,19 +47,19 @@ Partially true. I agree that you should not be too excited about opening a wood 
 
 I consider value-creation as something way more important than the cleverness and ingenuity of  companies like CRED to fill their pockets (which they haven't quite yet). I see businesses as a tap connecting a reservoir of resources and money to provide valuable products in a streamlined way. Pause for a while and think, how much exactly will a company contribute to the value of the overall economy of India if the only thing it does is earn revenue from credit card overdues. And yet, look the ridiculous amount of fame they have got.
 
-# startups as "get rich quick" schemes
+## startups as "get rich quick" schemes
 
 Are you in a tier 3 college? Don't worry. Studies don't matter nowadays. Education is obsolete. All you gotta do is think about something which you can make everyone buy. It doesn't need to contribute much in their lives. First, create the supply. Create a simple backend with a NoSQL database running on a SaaS platform because you haven't learned SQL and system administration yet, a simple frontend using React because you don't know vanilla javascript yet. Then spend your time in creating artificial demand. Make people feel how much they need your service. In fact, you don't even need to convince the actual customers, just boast about what your stupid website can do in front of filthy rich investors. You don't need to create a unicorn anyways, a couple million would do. Once you get them, sell the startup and bam! You have earned enough to be jobless for a lifetime.
 
 This is exactly what thousands Indian students are thinking right now. You can't question them, because the startup industry is growing in India. They have this false sense of pride and achievement with creating a useless startup. The government, the parents, your peers, everyone is talking about startups. I'm not against startups, in fact, I encourage them, as long as they are done with the correct mindset.
 
-# the correct mindset
+## the correct mindset
 
 Most startups fail because they are solving non-existent problems. What is your motive behind creating a startup. Is it a problem that has been genuinely bothering you for a while? Or is it what I described above? Are you seeing your startup as a solution to a legitimate problem or as a solution to your lack of skills to get a job? If you had a legitimate problem, and your startup fails, you wouldn't cry. You have other ways in mind to solve that problem. Success of the particular idea wasn't necessary, the necessity was in that problem getting solved. 
 
 The second question you must re-evaluate is how much money and resources you seek in return for the value that your startup generates. Does your startup really help create enourmous value for the people? If yes, then you do deserve to be a millionaire.
 
-# so why India?
+## so why India?
 
 All this time I have been trying to criticize the startup culture in India. But why only in India, you ask. These kinds of bubbles and scams happen even in the big economies like the U.S, then why am I targetting the Indian startup market specifically? This reality check is for those Indians who are overly optimistic about the future of India. I'm not saying you shouldn't be optimistic, but you must also consider the following facts:
 
