@@ -4,7 +4,7 @@
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
   import { afterNavigate } from '$app/navigation';
   import PostDate from '$lib/components/PostDate.svelte';
-  import type { ComponentType, SvelteComponentTyped } from 'svelte';
+  import type { ComponentType, SvelteComponent } from 'svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
   // @ts-ignore
   import MyImage from '$lib/assets/avatar.jpg?width=672&webp';
@@ -12,7 +12,7 @@
 
   type Data = {
     post: App.BlogPost;
-    component: ComponentType<SvelteComponentTyped>;
+    component: ComponentType<SvelteComponent>;
     layout: {
       fullWidth: boolean;
     };
@@ -73,6 +73,8 @@
         class="group -left-16 -top-1 mb-8 hidden h-10 w-10 items-center justify-center rounded-full border border-rosePine-surface/50 shadow-md shadow-rosePine-base/5 ring-1 ring-white/10 transition hover:border-rosePine-surface hover:ring-white/20 focus-visible:ring-2 lg:flex"
         href={canGoBack ? undefined : '/posts'}
         aria-label="Go back to posts"
+        role="button"
+        tabindex="0"
         on:click={goBack}
         on:keydown={goBack}
       >
