@@ -55,7 +55,7 @@ This is exactly what thousands Indian students are thinking right now. You can't
 
 ## the correct mindset
 
-Most startups fail because they are solving non-existent problems. What is your motive behind creating a startup. Is it a problem that has been genuinely bothering you for a while? Or is it what I described above? Are you seeing your startup as a solution to a legitimate problem or as a solution to your lack of skills to get a job? If you had a legitimate problem, and your startup fails, you wouldn't cry. You have other ways in mind to solve that problem. Success of the particular idea wasn't necessary, the necessity was in that problem getting solved. 
+Most startups fail because they are solving non-existent problems. What is your motive behind creating a startup? Is it a problem that has been genuinely bothering you for a while? Or is it what I described above? Are you seeing your startup as a solution to a legitimate problem or as a solution to your lack of skills to get a job? If you had a legitimate problem, and your startup fails, you wouldn't cry. You have other ways in mind to solve that problem. Success of the particular idea wasn't necessary, the necessity was in that problem getting solved. 
 
 The second question you must re-evaluate is how much money and resources you seek in return for the value that your startup generates. Does your startup really help create enourmous value for the people? If yes, then you do deserve to be a millionaire.
 
