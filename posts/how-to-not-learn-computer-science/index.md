@@ -2,7 +2,7 @@
 title: how to NOT start learning computer science
 date: 2021-10-02
 tags: ['learn']
-published: true
+published: false
 ---
 
 Trust me, NUMEROUS people are trying to help you learn IT and computer science out there. Many will even charge you handsome amounts of money just to teach you the so-called "coding skills". And I am here to debunk them :+1:.
