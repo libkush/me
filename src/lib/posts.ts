@@ -9,11 +9,12 @@ if (browser) {
 
 export async function getPosts(
   all: boolean = false,
+  published: boolean = true,
   page: number = 1,
   before: string = '',
   after: string = '',
   during: string = '',
-  tags: string[] = []
+  tags: string[] = [], 
 ): Promise<App.BlogPost[]> {
   const modules = import.meta.glob('/posts/**/*.{md,svx,svelte.md}');
   const entries = Object.entries(modules) as [string, () => Promise<App.MdsvexFile>][];
@@ -51,7 +52,7 @@ export async function getPosts(
       previous: allPosts[index + 1]
     }));
 
-  const publishedPosts = posts.filter((post) => post.published);
+  const publishedPosts = posts.filter((post) => published ? post.published : true);
   if (before !== '') {
     return paginate(
       publishedPosts.filter((post) => new Date(post.date).getTime() < new Date(before).getTime()),
