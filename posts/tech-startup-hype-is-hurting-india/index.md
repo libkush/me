@@ -27,6 +27,8 @@ Alright, now moving on to what their "tech" startup really is according to me. T
 
 Money-laundering scam startups is nothing new in India (and even elsehwere). I stumbled upon an absolutely horrendous scam called "Qpi Techonology" that made utter ludicrous claims about using "quantum simulations to make high energy density solid-state batteries". In fact, if you happen to visit their [website](https://qpitech.holdings/), which looks more suspicious than a microsoft tech support scam, every other sentence uses the words "quantum" and "AI" in it. They literally boast about everything ranging from SSBs, cloud infrastructure, quantum computers, semiconductors and what not. 
 
+![Get Funded Meme](./get-funded.png)
+
 The sad thing about this fraudulent startup nexus is that the naive media [showcases them](https://www.livemint.com/brand-stories/qpivolta-announces-india-s-first-indigenous-high-energy-density-lithium-metal-based-ssb-pouch-cell-11678083287215.html) as real innovation to create an optimistic narrative to lure foreign investors.
 
 ## the not-so-scam startups
