@@ -60,7 +60,6 @@
 uptime    {years}y, {months}m, {days}d
 locale    en_IN
 pkgs      <a href={githubURL}>git</a>, <a href={discordURL}>dc</a>, <a href={twtxt}>twtxt</a>
-smtp      <a href="mailto:{email}">{email}</a>
 
 <strong>~</strong> <span id="type" />
 
