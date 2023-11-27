@@ -13,7 +13,7 @@
 >
   <slot name="eyebrow" />
   {#if $$slots.title}
-    <div class="text-base font-semibold tracking-tight">
+    <div class="text-base font-semibold">
       {#if href}
         <a {href} data-sveltekit-preload-data="hover">
           <span class="absolute inset-x-0 inset-y-0 z-20" />

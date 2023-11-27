@@ -146,7 +146,7 @@
   .menu-item {
     cursor: pointer;
     display: block;
-    font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', Times;
+    font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', Times, serif;
     font-size: clamp(3rem, 8vw, 8rem);
     padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
     text-decoration: none;

@@ -88,7 +88,7 @@
   <div class="mx-auto w-full overflow-x-hidden">
     <article>
       <header class="flex flex-col">
-        <h1 class="mb-6 mt-6 text-4xl font-bold tracking-tight text-rosePine-rose">
+        <h1 class="mb-6 mt-6 text-4xl font-bold text-rosePine-rose">
           {data.post.title}
         </h1>
         <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
