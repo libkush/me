@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { website, name, bio } from '$lib/info';
+  import { website, name } from '$lib/info';
   import ToC from '$lib/components/ToC.svelte';
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte';
   import { afterNavigate } from '$app/navigation';
@@ -7,7 +7,6 @@
   import type { ComponentType, SvelteComponent } from 'svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
   // @ts-ignore
-  import MyImage from '$lib/assets/avatar.jpg?width=672&webp';
   import Sign from '$lib/assets/sign.svelte';
 
   type Data = {
@@ -86,16 +85,16 @@
   </div>
 
   <div class="mx-auto w-full overflow-x-hidden">
-    <article>
+    <article class="prose">
       <header class="flex flex-col">
-        <h1 class="mb-6 mt-6 text-4xl font-bold text-rosePine-rose">
+        <h1 class="mb-6 mt-6 font-bold">
           {data.post.title}
         </h1>
         <PostDate class="text-sm sm:text-base" post={data.post} decorate collapsed />
       </header>
 
       <!-- render the post -->
-      <div class="prose">
+      <div>
         <svelte:component this={data.component} />
       </div>
     </article>

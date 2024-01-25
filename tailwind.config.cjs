@@ -27,11 +27,11 @@ module.exports = {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
       base: ['1rem', { lineHeight: '1.5rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.25rem', { lineHeight: '1.75rem' }],
+      lg: ['1.125rem', { lineHeight: '1.875rem' }],
+      xl: ['1.25rem', { lineHeight: '1.875rem' }],
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2rem', { lineHeight: '2.5rem' }],
+      '4xl': ['2rem', { lineHeight: '3rem' }],
       '5xl': ['3rem', { lineHeight: '3.5rem' }],
       '6xl': ['3.75rem', { lineHeight: '1' }],
       '7xl': ['4.5rem', { lineHeight: '1' }],
@@ -42,7 +42,7 @@ module.exports = {
       DEFAULT: {
         css: {
           '--tw-prose-body': theme('colors.rosePine.text'),
-          '--tw-prose-headings': theme('colors.rosePine.foam'),
+          '--tw-prose-headings': theme('colors.rosePine.text'),
           '--tw-prose-links': theme('colors.rosePine.foam'),
           '--tw-prose-links-hover': theme('colors.rosePine.pine'),
           '--tw-prose-underline': theme('colors.rosePine.foam / 0.2'),
@@ -62,8 +62,8 @@ module.exports = {
           '--tw-prose-td-borders': theme('colors.rosePine.text'),
           // Base
           color: 'var(--tw-prose-body)',
-          fontSize: theme('fontSize.lg')[0],
-          // tracking: theme('letterSpacing.wide'),
+          fontSize: theme('fontSize.lg'),
+          lineHeight: theme('fontSize.lg')[1].lineHeight,
           '> *': {
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.10')
@@ -74,8 +74,9 @@ module.exports = {
           },
 
           h1: {
-            fontSize: theme('fontSize.2xl')[0],
-            lineHeight: theme('lineHeight.9'),
+            marginTop: 0,
+            fontSize: theme('fontSize.4xl')[0],
+            lineHeight: theme('fontSize.4xl')[1].lineHeight,
             fontWeight: theme('fontWeight.bold')
           },
 
@@ -85,7 +86,7 @@ module.exports = {
             fontWeight: theme('fontWeight.semibold')
           },
           h2: {
-            fontSize: theme('fontSize.3xl')[0],
+            fontSize: theme('fontSize.2xl')[0],
             lineHeight: theme('lineHeight.7'),
             marginTop: theme('spacing.10'),
             marginBottom: theme('spacing.5')
@@ -96,7 +97,7 @@ module.exports = {
             marginTop: theme('spacing.16'),
             marginBottom: theme('spacing.4')
           },
-          ':is(h2, h3) + *': {
+          ':is( h2, h3) + *': {
             marginTop: 0
           },
 
@@ -150,9 +151,11 @@ module.exports = {
 
           // Quotes
           blockquote: {
+            marginTop: theme('spacing.5'),
+            marginBottom: theme('spacing.5'),
             paddingLeft: theme('spacing.6'),
             borderLeftWidth: theme('borderWidth.2'),
-            color: theme('colors.rosePine.iris.400'),
+            color: theme('colors.rosePine.subtle'),
             borderLeftColor: 'var(--tw-prose-quote-borders)',
             fontStyle: 'italic'
           },
