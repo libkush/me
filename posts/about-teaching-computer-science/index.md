@@ -1,5 +1,5 @@
 ---
-title: about teaching computer science
+title: About Teaching Computer Science
 date: 2023-06-25
 tags: ['computer science']
 published: true
@@ -11,7 +11,7 @@ I recently watched Grant Sanderson's (the man behind [3blue1brown](https://www.3
 
 Now, I totally agree with this notion and I love math too, but for the sake of this article lets focus on computer science.
 
-## learning versus information
+## Learning Versus Information
 
 What's the most informative document for programmers? Documentation, of course. But we all know how boring and painful reading the documentation is. While it is important to provide the correct information, developers are enticed to writing more exact documentation for their code. But the seperation between documentation and learning resources must be kept. There is a tradeoff between learnable and informative resources. 
 

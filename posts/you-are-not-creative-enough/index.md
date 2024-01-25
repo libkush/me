@@ -1,5 +1,5 @@
 ---
-title: you are not creative enough
+title: You Are Not Creative Enough
 date: 2023-03-19
 tags: ['philosophy']
 published: true
@@ -14,7 +14,7 @@ Wow, that was intense. If you freaked out, don't worry. Take a deep breath and r
 
 Seems simple eh? Well let's start with some basic imagination
 
-## playing god
+## Playing God
 
 1. The creatures here look like blobs and have no shape. Is this valid?
 
@@ -30,7 +30,7 @@ Seems simple eh? Well let's start with some basic imagination
 
    - What is a plane in that world? Is it i hat and j hat? But what if mathematics had to be different. Can you think of a completely fantastical form of mathematics and logic from scratch that doesn't use the axioms that we do?
 
-## ouch
+## Ouch
 
 ![thinker](./thinker.png)
 

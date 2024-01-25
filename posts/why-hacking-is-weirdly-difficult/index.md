@@ -1,5 +1,5 @@
 ---
-title: why hacking is weirdly difficult
+title: Why Hacking Is Weirdly Difficult
 date: 2022-01-12
 tags: ['hacking', 'learn']
 published: true
@@ -15,7 +15,7 @@ I recently participated in [Amrita InCTFj](https://www.inctf.in/) (Indian CTF co
 
 Since I had never done any hacking in a real sense before, it took some time for me to understand stuff. Even though I knew Web development, JavaScript and Python, I had to learn the intricate details of everything I knew. That's what makes hacking different from development or programming.
 
-## why hacking is different (and perhaps difficult)
+## Why Hacking Is Different (And Perhaps Difficult)
 
 I have some experience with Web Development and Python, as I said. (Can't tell exactly how much as I have stopped trusting my own confidence after learning about the Dunning-Kruger effect) But as soon as I opened the first challenge, I had no clue what I need to do next. I could very well see the website's source code from the DevTools, but nothing seemed to be interesting about it. The reason for that was that I was looking at the website from a visitor/developer perspective, and not from the perspective of a hacker.
 
@@ -29,7 +29,7 @@ As a programmer, I never thought of every intricate detail of my own code many t
 
 But as soon as I started playing the CTF, I started spending hours trying to understand just a few lines of code from the challenge. Developers seldom require all details of a particular library or external pieces of code. But your primary job in hacking is to _break_ stuff, especially _computer_ stuff\_ with well-defined logical rules of what will work and what doesn't.
 
-## we all love to break rules
+## We All Love To Break Rules
 
 If I tell you some of my examples, you will easily be able to recall how even you might have done something _similar to_ hacking in real, day-to-day life.
 
@@ -43,7 +43,7 @@ Just like breaking uniform rules required 3-4 years of experience in school, hac
 
 Hence I think, hacking comes as naturally to human beings as breaking everyday rules does, just that it deals with computers.
 
-## conclusion
+## Conclusion
 
 Popular to contrary belief, breaking things isn't as easy as making things sometimes, at least in software. Hacking requires tremendous mental energy for figuring out various creative ways in which things can be exploited. Reverse Engineering also requires you to reverse the entire logic of the program, to get the desired information. Each hacking challenge is just another puzzle or a riddle you have to solve. Here is a good python reversing challenge I found in the competition, try to find the flag :)
 

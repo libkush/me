@@ -1,5 +1,5 @@
 ---
-title: python concurrency basics for cryptbuddy
+title: Python Concurrency Basics for Cryptbuddy
 date: 2023-10-29
 tags: []
 published: true

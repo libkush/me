@@ -1,5 +1,5 @@
 ---
-title: should you feel bad for new programmers
+title: Should You Feel Bad For New Programmers
 date: 2023-10-29
 tags: ['opinion', 'programming']
 published: false
@@ -39,4 +39,4 @@ All this time I ran out of energy multiple times. I made thousands of mistakes. 
 
 This was all about my expedition. Now let's talk about how I "would" have learned given that I knew what's coming ahead.
 
-## How it should have been
+## How It Should Have Been
