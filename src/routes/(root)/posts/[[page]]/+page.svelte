@@ -16,7 +16,7 @@
     const response = (await fetch(`/api/posts?page=${page}`).then((res) =>
       res.json()
     )) as App.APIResponse;
-    newBatch = response.posts;
+    newBatch = response.posts.filter((post) => post.published);
   }
 
   onMount(() => {

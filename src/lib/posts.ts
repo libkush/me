@@ -52,28 +52,27 @@ export async function getPosts(
       previous: allPosts[index + 1]
     }));
 
-  const publishedPosts = posts.filter((post) => published ? post.published : true);
   if (before !== '') {
     return paginate(
-      publishedPosts.filter((post) => new Date(post.date).getTime() < new Date(before).getTime()),
+      posts.filter((post) => new Date(post.date).getTime() < new Date(before).getTime()),
       page
     );
   }
 
   if (all) {
-    return publishedPosts;
+    return posts;
   }
 
   if (after !== '') {
     return paginate(
-      publishedPosts.filter((post) => new Date(post.date).getTime() > new Date(after).getTime()),
+      posts.filter((post) => new Date(post.date).getTime() > new Date(after).getTime()),
       page
     );
   }
 
   if (during !== '') {
     return paginate(
-      publishedPosts.filter(
+      posts.filter(
         (post) =>
           post.metaDate === during ||
           (new Date(post.date).getTime() >= new Date(during).getTime() &&
@@ -85,12 +84,12 @@ export async function getPosts(
 
   if (tags && tags.length > 0) {
     return paginate(
-      publishedPosts.filter((post) => post.tags?.some((tag) => tags.includes(tag))),
+      posts.filter((post) => post.tags?.some((tag) => tags.includes(tag))),
       page
     );
   }
 
-  return paginate(publishedPosts, page);
+  return paginate(posts, page);
 }
 
 function addTimezoneOffset(date: Date) {

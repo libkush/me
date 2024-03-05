@@ -27,6 +27,7 @@
       smartBackspace: true
     });
   });
+  const postData = data.posts.filter((post) => post.published)
 </script>
 
 <svelte:head>
@@ -73,7 +74,7 @@ pkgs      <a href={githubURL}>gh</a>, <a href={discordURL}>dc</a>
         >view all <ArrowRightIcon class="h-4 w-4" /></a
       >
     </div>
-    <PostsList posts={data.posts} />
+    <PostsList posts={postData} />
   </section>
 </div>
 
