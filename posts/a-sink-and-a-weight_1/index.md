@@ -15,7 +15,7 @@ The following text is me trying to explain concurrency to my 1 week younger self
 
 ## It is All a Lie
 
-Yes, concurrency is a lie. It is an illusion. But when it comes to scientific wizardry, an illusion can serve purposes beyond mere entertainment. The moving images of cinema are an illusion, but they do indeed move in your head (and ironically do serve the purpose of entertainment, as I realised after writing it). When it comes to concurrency, assuming we have an old ass single-core CPU, it by definition is going to execute one operation per clock cycle (I hope you atleast know that a CPU essentially just executes simple instructions). Imagine a CPU to function like a pendulum clock.
+Yes, concurrency is a lie. Most of us will assume that concurrent is the same thing as executing in parallel, but in reality, it may or may not be truly parallel. It is simply an illusion of parallel execution. But when it comes to scientific wizardry, an illusion can serve purposes beyond mere entertainment. The moving images of cinema are an illusion, but they do indeed move in your head (and ironically do serve the purpose of entertainment, as I realised after writing it). When it comes to concurrency, assuming we have an old ass single-core CPU, it by definition is going to execute one operation per clock cycle (I hope you atleast know that a CPU essentially just executes simple instructions). Imagine a CPU to function like a pendulum clock.
 
 ![](./pendulum.webm)
 
