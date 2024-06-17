@@ -49,7 +49,7 @@
         {lastName}
       </h1>
       <br />
-      <p class="text-2xl font-light text-rosePine-iris"><i>»[…] student, developer, etc.</i></p>
+      <p class="text-2xl font-light text-rosePine-iris"><i>» sui generis.</i></p>
     </div>
     <div class="terminal">
       <pre>

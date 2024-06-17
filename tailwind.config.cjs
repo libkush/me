@@ -94,7 +94,7 @@ module.exports = {
           h3: {
             fontSize: theme('fontSize.xl')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.16'),
+            marginTop: theme('spacing.4'),
             marginBottom: theme('spacing.4')
           },
           ':is( h2, h3) + *': {
