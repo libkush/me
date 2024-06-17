@@ -2,7 +2,7 @@
 title: A Sink and a Weight (Part 1)
 date: 2024-04-01
 tags: ['computer science', 'concurrency', 'javascript']
-published: false
+published: true
 ---
 
 As the readers might have guessed it, this article is neither about a 🌀 nor a 🏋️‍♂️. It begins with one of the gazillions of absurdities of YavaScript, or so I had thought in excitement. As soon as I figured out the word "synchronous" meant "happening at the same time, simultaneously", I was jumped up about knowing another reason to call YavaScript stupid. Well, that is only until I began to learn more about concurrency.
@@ -29,7 +29,7 @@ For now, this is enough to prove that a simple single CPU core never actually ex
 
 To explain this, I am going to use an oddly specific and personally nostalgic ordeal as an analogy. I once had this friend who talked with me on Discord. Now initially, we were too awkward to talk about more than one thing at once, but the amount of things we had to discuss grew proportionally to our friendship. Eventually, there was a time when we yapped about so many things in a day, that when either one of us came online, there was a catalogue of different topics to respond to. Now it was technically impossible for us to stay online the entire day and respond to each message as soon as it arrives, so sequential responses were impossible. What we did was what anyone would do, pick out the interesting messages and reply to those first. The topics we chose to respond to were in no particular order (keep this idea in mind). If one were to fast forward these days into seconds, it would seem as if multiple topics were being discussed concurrently, and also that our friendship ended surprisingly soon. 
 
-This is a satisfactory analogy for preemption, as what happens in the latter is that seperate threads are _paused_ and interrupted by other threads. A thread keeps executing until it is interrupted. This happens recursively and fast enough to give an illusion of concurrent execution of all the threads. Next time you see the "System interrupts" process in your task manager, keep in mind that doing this is what it is responsible for.
+This is a satisfactory analogy for preemption, as what happens in the latter is that separate threads are _paused_ and interrupted by other threads. A thread keeps executing until it is interrupted. This happens recursively and fast enough to give an illusion of concurrent execution of all the threads. Next time you see the "System interrupts" process in your task manager, keep in mind that doing this is what it is responsible for.
 
 > While this is the case for multithreading, modern CPUs **can** leverage multiple cores to execute multiple instructions at once, but given that many programs use thousands of threads, and that there only a few cores in most CPUs, it is almost always the case that individual cores will also use preemption to make these threads work simultaneously.
 
